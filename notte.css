@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Messapia Regular";
+    src: url("font/Messapia-Regular.woff2") format("woff2"),
+         url("font/Messapia-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Messapia Bold";
+    src: url("font/Messapia-Bold.woff2") format("woff2"),
+         url("font/Messapia-Bold.woff") format("woff");
+}
+
+#content {
+    margin: 0;
+    margin-top: 15vh;
+    transition: background-color .5s ease;
+}
+
+.shutter-section {
+    width: 100vw;
+    margin: 0;
+    position: relative;
+}
+
+.this-grid {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 10px;
+    position: relative;
+}
+
+.this-grid-column {
+    width: 25%;
+    padding: 0 10px;
+}
+
+.this-grid-column p {
+    margin: 20px 0;
+}
+
+.large-column {
+    width: 50%
+}
+
+.one-column {
+    width: 100%;
+}
+
+.first-layer {
+    width: 100vw;
+}
+
+.second-layer {
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.white-background {
+    background-color: #fff;
+}
+
+.map {
+    background-image: url(media/la-notte/fiume.svg);
+    background-position: 25% 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.night-section {
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* background-color: #000; */
+}
+
+.text-container {
+    width: 100vw;
+    margin-top: 15%;
+    margin-left: calc(25% + 20px);
+    height: auto;
+    color: #fff;
+}
+
+/* .audio-wrapper {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+.audio-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px #fff;
+    margin-right: 50px;
+    z-index: 1;
+    cursor: pointer
+}
+
+.rec01 {
+    top: 5%;
+    left: 50%;
+} */
+
+.spotlight-section {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.spotlight-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 60vw;
+    padding: 50px;
+    color: #000;
+}
+
+.spotlight-text p {
+    /* font-size: calc(12px + 2vw); */
+    text-align: center;
+}
+
+#spotlight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* top: 0;
+    left: 0; */
+    /* transform: translate(-50%, -50%); */
+    transform-origin: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 85, 0.5);
+    filter: blur(50px);
+    mix-blend-mode: difference;
+    z-index: 1;
+}
+
+
+
