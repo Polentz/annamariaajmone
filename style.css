@@ -32,6 +32,17 @@ body {
     background: #000;
 }
 
+p::selection,
+h1::selection,
+h2::selection,
+br::selection,
+span::selection,
+a::selection,
+li::selection,
+img::selection {
+    color: #ff0055;
+}
+
 .loading {
     position: fixed;
     top: 0;

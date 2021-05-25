@@ -1,3 +1,17 @@
+window.addEventListener("load", function () {
+    openElement("kafka-btn", "kafka", "open");
+    openElement("le-guin-btn", "le-guin", "open");
+    openElement("del01-btn", "deleuze01", "open");
+    openElement("del02-btn", "deleuze02", "open");
+});
+function openElement(trigger, element, className) {
+    document.getElementById(trigger).addEventListener("click", (event) => {
+        document.getElementById(element).classList.toggle(className);
+        event.stopPropagation();
+    });
+}
+
+
 const area = document.querySelector(".shutter-section");
 area.addEventListener("mousemove", (event) => {
     let wW = document.body.clientWidth;
@@ -10,21 +24,23 @@ area.addEventListener("mousemove", (event) => {
 window.onscroll = function () { changeColor() };
 function changeColor() {
     const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-    console.log(scrollTop);
-    const elem = document.getElementById("content");
+    // console.log(scrollTop);
+    const element = document.getElementById("content");
+    const nav = document.querySelector(".grid-menu")
     if (scrollTop < 2500) {
-        elem.style.backgroundColor = "#fff";
-    } else if (scrollTop < 3800) {
-        elem.style.backgroundColor = "#000";
+        element.style.backgroundColor = "#fff";
+        nav.style.opacity = "1";
+        nav.style.pointerEvents = "all";
     } else {
-        elem.style.backgroundColor = "#fff"
+        element.style.backgroundColor = "#000";
+        nav.style.opacity = "0";
+        nav.style.pointerEvents = "none";
     }
 };
 
 window.addEventListener("load", function () {
     typewrite("text-a", "Roland Hammel tells us how wolves rather hunt sheep than deers and keep attacking until everything around is quiet again.                          ", true, 50);
 });
-
 function typewrite(target, text, loop, speed) {
     target = document.getElementById(target);
     if (speed === undefined) { speed = 200; }
@@ -53,47 +69,3 @@ spotArea.addEventListener("mousemove", (event) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const spotlightArea = document.querySelector(".spotlight-section");
-// const spotlight = document.querySelector(".spotlight")
-// let mouseX = 0
-// let mouseY = 0
-// function animate() {
-//     spotlight.style.left = mouseX + "px";
-//     spotlight.style.top = mouseY + "px";
-//     requestAnimationFrame(animate);
-// }
-// animate()
-// document.addEventListener("mousemove", function (event) {
-//     mouseX = event.pageX
-//     mouseY = event.pageY
-// });
-
-
-
-
-
-
-
-
-// window.addEventListener("DOMContentLoaded", () => {
-//     const spotlight = document.querySelector(".spotlight");
-//     window.addEventListener("mousemove", e => updateSpotlight(e));
-//     updateSpotlight(e);
-// })
-
-// function updateSpotlight(e) {
-//     spotlight.style.backgroundImage = `radial-gradient(circle, ${e.pageX / window.innerWidth * 100}%) ${e.pageY / window.innerHeight * 100}%)`
-// }

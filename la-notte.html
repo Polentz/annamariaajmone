@@ -21,17 +21,18 @@
         <p style="letter-spacing: 10px;">La notte è il mio giorno preferito</p>
     </div>
 
+    <nav class="grid-menu">
+        <div class="menu-name area-1-2">
+            <a href="index.html" class="link menu-items">Annamaria Ajmone</a>
+        </div>
+        <div class="menu-links area-4-6">
+            <a href="about.html" class="link menu-items">About</a>
+            <a href="mailto:annamaria.org@gmail.com" class="link menu-items">Contatti</a>
+            <!-- <a class="link menu-items">En</a> -->
+        </div>
+    </nav>
+
     <div class="content" id="content">
-        <nav class="grid-menu">
-            <div class="menu-name area-1-2">
-                <a href="index.html" class="link menu-items">Annamaria Ajmone</a>
-            </div>
-            <div class="menu-links area-4-6">
-                <a href="about.html" class="link menu-items">About</a>
-                <a href="mailto:annamaria.org@gmail.com" class="link menu-items">Contatti</a>
-                <a class="link menu-items">En</a>
-            </div>
-        </nav>
 
         <section class="shutter-section">
             <div class="first-layer">
@@ -53,7 +54,7 @@
                     </div>
                 </div>
 
-                <div class="this-grid need-margin">
+                <div class="this-grid need-margin" style="padding-top: 1px;">
                     <div class="this-grid-column">
                         <p>Roland Metral taught us to tell the difference between a silver pine and a red pine. Turn the
                             branch, look at the back of the leaves: the silver pine’s needle features two white lines.
@@ -103,16 +104,14 @@
                     <div class="this-grid-column">
                     </div>
                 </div>
-
             </div>
 
             <div class="second-layer">
-                <div class="this-grid map white-background">
+                <div class="this-grid map white">
                     <div class="this-grid-column">
                         <img src="media/la-notte/IMG_0725.jpg" width="100%">
-
                     </div>
-                    <div class="this-grid-column" style="align-self: flex-start;">
+                    <div class="this-grid-column">
                         <p>It takes decades for a tree to rot, here. Animals and trees share
                             the same space, but their lifespans are incomparable.</p>
                         <img src="media/la-notte/IMG_0702.jpg" width="100%">
@@ -127,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="this-grid need-margin white-background">
+                <div class="this-grid need-margin white">
                     <div class="this-grid-column">
                         <p>Roland Metral taught us to tell the difference between a silver pine and a red pine. Turn the
                             branch, look at the back of the leaves: the silver pine’s needle features two white lines.
@@ -146,7 +145,7 @@
                     </div>
                 </div>
 
-                <div class="this-grid need-margin white-background">
+                <div class="this-grid need-margin white" style="padding-top: 1px;">
                     <div class="this-grid-column">
                         <img src="media/la-notte/IMG_0768.jpg" width="100%">
                     </div>
@@ -159,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="this-grid need-margin white-background">
+                <div class="this-grid need-margin white">
                     <div class="this-grid-column">
                     </div>
                     <div class="this-grid-column">
@@ -186,7 +185,6 @@
                     <div class="this-grid-column">
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -220,22 +218,179 @@
         </section>
 
         <section class="spotlight-section">
-            <div id="spotlight"></div>
-            <div class="spotlight-text">
-                <p>During the night, the forest is noisy. Animals wake us up, trying to break
-                    into the house.</p>
+            <div class="scroll-snap">
+                <div id="spotlight"></div>
+                <div class="spotlight-text">
+                    <p>During the night, the forest is noisy. Animals wake us up, trying to break
+                        into the house.</p>
+                </div>
+                <div class="audio-wrapper rec01">
+                    <a id="rec01"></a>
+                </div>
+
+                <div class="audio-wrapper rec02">
+                    <a id="rec02"></a>
+                </div>
             </div>
         </section>
+
+        <section class="library-section">
+            <div class="library-container">
+                <div class="library-menu">
+                    <ul>
+                        <li><a href="#morizot" id="morizot-btn" class="link">Baptiste Morizot: Sur la piste animale</a>
+                        </li>
+                        <li><a href="#kafka" id="kafka-btn" class="link">Franz Kafka: La tana</a></li>
+                        <li><a href="#le-guin" id="le-guin-btn" class="link">Ursula K. Le Guin</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#deleuze01" id="del01-btn" class="link">Gilles Deleuze: A COMME ANIMAL</a></li>
+                        <li><a href="#deleuze02" id="del02-btn" class="link">Gilles Deleuze: CAPITALISMO E
+                                SCHIZOFRENIA</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#illiez" id="illiez-btn" class="link">About Val-D'Illiez</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#people" id="people-btn" class="link">People</a></li>
+                    </ul>
+                    <div class="info-btn" id="info-btn"></div>
+                </div>
+
+                <div class="library-content">
+                    <div class="library-content-wrapper" id="kafka">
+                        <div class="text-box scrollable">
+                            <h1>LA TANA </h1>
+                            <p>Ho assestato la tana e pare riuscita  bene. Dal di fuori, in verità, si vede soltanto un
+                                gran buco che però in realtà  non porta in nessun luogo. Già dopo pochi passi s'incontra
+                                la roccia naturale e solida. Non voglio vantarmi di aver adottato questa astuzia con
+                                intenzione, fu piuttosto l'avanzo di uno dei tanti vani tentativi di costruzione, ma
+                                infine mi parve vantaggioso non colmare quest'unico buco. Certo ci sono astuzie così
+                                sottili che si stroncano da sole, lo so meglio di qualunque altro, ed è certamente
+                                temerario  richiamare con questo buco l'attenzione sull'eventualità che qui ci sia
+                                qualcosa che metta conto d'indagare. Ma non mi conosce chi pensa che io sia codardo e
+                                scavi questa tana soltanto per vigliaccheria. Ad  almeno mille  passi di distanza da
+                                questo buco si trova, coperto da uno strato spostabile di musco, il vero accesso alla
+                                tana che è al sicuro come può essere sicuro qualcosa al mondo; si sa, qualcuno potrebbe
+                                montare sul musco o urtarlo e allora la mia tana sarebbe aperta, e chiunque ne abbia
+                                voglia - vi sono però necessarie  beninteso anche certe capacità non troppo frequenti -
+                                può penetrarvi  e distruggere tutto per sempre. Lo so benissimo e la mia vita, neanche
+                                ora che è al suo culmine, ha un momento che sia veramente tranquillo; là in quel punto
+                                del musco opaco posso essere colpito a morte e nei miei sogni c'è spesso un grugno
+                                bramoso che vi annusa continuamente. Realmente avrei potuto, si dirà, chiudere questo
+                                buco d'entrata, al di sopra, con uno strato sottile di terra battuta e più sotto con
+                                terra  friabile  in  modo che bastasse un piccolo sforzo per aprirmi  ogni volta la via
+                                d'uscita. Eppure non è possibile; proprio la prudenza m'impone di avere un'immediata
+                                possibilità di sfogo, la prudenza stessa esige, come purtroppo tante volte che si metta
+                                a repentaglio la vita. Tutti questi son calcoli molto faticosi, e la gioia che il
+                                cervello intelligente ha di se stesso è talvolta l'unico motivo perché si continui a
+                                calcolare. Devo avere l'immediata possibilità di evasione; infatti, nonostante la
+                                vigilanza non potrei essere aggredito da una parte assolutamente imprevista? Vivo in
+                                pace nella parte più interna della casa, e intanto il nemico mi si avvicina da qualche
+                                parte scavando lento e silenzioso.</p>
+                            <div class="close-btn"></div>
+                        </div>
+                    </div>
+
+                    <div class="library-content-wrapper" id="le-guin">
+                        <div class="text-box scrollable">
+                            <p>La verità è una questione di immaginazione, perchè le piante sono meravigliose?
+                                They can eat light!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="library-content-wrapper" id="deleuze01">
+                        <div class="text-box scrollable">
+                            <h1>L'Abécédaire de Gilles Deleuze: A comme Animal</h1>
+                            <p>Gilles Deleuze intervistato da Claire Parnet (estratto)</p>
+                            <p>CP: Da qui il tuo rapporto animale/scrittura, perché anche lo scrittore ha un mondo…</p>
+                            <p>GD: È più complesso. Sì, ci sono altri aspetti, non basta avere un mondo per essere un
+                                animale. Ciò che mi affascina più di tutto sono le questioni relative al territorio. E
+                                con Félix Guattari abbiamo quasi fatto un concetto filosofico dell’idea di territorio.
+                                Ci sono anche animali senza territorio, ma quelli con un territorio sono prodigiosi.
+                                Costituire un territorio per me è quasi la nascita dell’arte. Quando vediamo come un
+                                animale delimita il proprio territorio, tutti lo sanno, tutti hanno sentito la storia
+                                delle ghiandole anali, dell’urina con cui l’animale segna i confini del proprio
+                                territorio. Ma c’è molto di più. delimitare il territorio ci sono anche una serie di
+                                posture, per esempio abbassarsi/alzarsi, una serie di colori. Il babbuino, per esempio,
+                                i colori delle chiappe dei babbuini, che esibiscono al confine del territorio.
+                                COLORE, CANTO, POSTURA, sono le tre determinazioni dell’Arte. Vale a dire: il colore, le
+                                linee – le posture animali possono essere vere e proprie linee – colore, linea, canto, è
+                                pura arte. E quindi quando escono o quando rientrano nel proprio territorio, il loro
+                                comportamento. Il territorio è il dominio dell’avere. È curioso che si sia nell’avere,
+                                cioè nella proprietà, le mie proprietà, al modo di Beckett o di Michaux. Il territorio
+                                concerne la proprietà dell’animale e uscire dal territorio è avventurarsi. Ci sono
+                                animali che riconoscono i propri congiunti, li riconoscono nel proprio territorio, non
+                                fuori.</p>
+                        </div>
+                    </div>
+
+                    <div class="library-content-wrapper" id="deleuze02">
+                        <div class="text-box scrollable">
+                            <h1>CAPITALISMO E SCHIZOFRENIA</h1>
+                            <p>Gilles Deleuze e Felix Guattari (estratto)</p>
+                            <p>Un divenire non è una corrispondenza di rapporti. Ma non è neppure una rassomiglianza,
+                                un'imitazione e, al limite, un’identificazione. Tutta la critica strutturalista della
+                                serie sembra inattaccabile. Divenire non è né progredire né regredire secondo una serie.
+                                E soprattutto non si fa divenire nell’immaginazione, anche quando l’immaginazione
+                                raggiunge il più elevato livello cosmico o dinamico, come in Jung o Bachelard. I
+                                divenir-animali non sono sogni né fantasmi. Sono perfettamente reali. Ma di quale realtà
+                                si tratta? Perché, se divenire animale non consiste nel fare l’animale o nell’imitarlo,
+                                è ovvio anche che l’uomo non diviene «realmente» animale più di quanto l’animale non
+                                diventi «realmente» qualche cosa d’altro. Il divenire non produce nient’altro che se
+                                stesso. È una falsa alternativa che ci fa dire: o si imita o si è. Ad essere reale è il
+                                divenire stesso, il blocco di divenire, e non l’insieme dei termini che si suppongono
+                                fissi e per i quali passerebbe colui che diviene. Il divenire può e deve essere
+                                qualificato come divenir-animale senza avere un termine che sarebbe l’animale divenuto.
+                                Il divenir-animale dell’uomo è reale, benché non sia reale l’animale che egli diviene;
+                                e, simultaneamente, il divenir-altro dell’animale è reale benché tale altro non lo sia.
+                                Bisognerà spiegare questo punto: come un divenire non possa avere soggetto distinto da
+                                se stesso. 
+                            <p>Infine, divenire non è un’evoluzione, almeno non un’evoluzione per discendenza o
+                                filiazione. Il divenire non produce nulla per filiazione, ogni filiazione sarebbe
+                                immaginaria. Il divenire è sempre di un ordine diverso rispetto a quello della
+                                filiazione. È alleanza. L’evoluzione comporta veri divenire ed è nel vasto campo delle
+                                simbiosi che mette in gioco esseri di scale e regni del tutto differenti, senza alcuna
+                                filiazione possibile. […]</p>
+                            <p>Il divenire è involutivo, l’involuzione è creatrice. Regredire, è andare verso il
+                                meno
+                                differenziato. Ma involvere è formare un blocco che fila secondo la propria linea, «tra»
+                                i termini messi in gioco e secondo i rapporti assegnabili. […]</p>
+                            <p>Divenire non è certamente imitare né identificarsi, non è neanche
+                                regredire-progredire; e
+                                nemmeno corrispondere, stabilire rapporti corrispondenti; infine non è produrre,
+                                produrre una filiazione, produrre per filiazione. Divenire è un verbo che ha tutta la
+                                sua consistenza; non si riduce e non ci conduce ad «apparire» né a «essere» né a
+                                «equivalere» né a «produrre».</p>
+                            <p>In un divenir-animale, si ha sempre a che fare con una muta, con una banda, con una
+                                popolazione, con un popolamento, insomma con una molteplicità.</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <p>with Stella Succi and Natália Trejbalová</p>
+                    <p>Design & Code <a href="mailto:giuliapolenta@gmail.com">Giulia Polenta</a></p>
+                    <p>© 2021 Annamaria Ajmone</p>
+                </footer>
+            </div>
+
+
+        </section>
+
     </div>
 
-
-
-
-    <!-- <footer class="this-footer">
+    <!-- <footer>
         <p>with Stella Succi and Natália Trejbalová</p>
         <p>Design & Code <a href="mailto:giuliapolenta@gmail.com">Giulia Polenta</a></p>
         <p>© 2021 Annamaria Ajmone</p>
     </footer> -->
+
+
+
+
 
     <div class="line"></div>
 
