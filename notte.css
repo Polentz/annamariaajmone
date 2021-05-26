@@ -232,14 +232,22 @@ img::selection {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    background-color: #000;
     filter: blur(5px);
     position: absolute;
     z-index: 5;
     cursor: pointer;
 }
 
+.rec00 {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 10%;
+    animation: beat 3s .5s infinite linear reverse;
+}
+
 .rec01 {
-    background-color: #000;
     top: 20%;
     left: 20%;
     animation: beat 2s infinite linear alternate-reverse;
@@ -248,10 +256,15 @@ img::selection {
 .rec02 {
     width: 20px;
     height: 20px;
-    background-color: #000;
     top: 50%;
     left: 15%;
     animation: beat 1s infinite linear reverse;
+}
+
+.rec03 {
+    top: 70%;
+    right: 15%;
+    animation: beat 3s .5s infinite linear reverse;
 }
 
 .library-section {
