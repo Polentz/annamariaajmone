@@ -22,18 +22,68 @@ img::selection {
 
 #content {
     margin: 0;
-    margin-top: 15vh;
+    padding-top: 15vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
     transition: background-color .5s ease;
+}
+
+.to-top-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #000;
+    filter: blur(1px);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 23px;
+    transition: filter .5s ease;
+}
+
+.to-top-btn:hover {
+    filter: blur(5px);
+}
+
+.info {
+    width: 25vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.info.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#close-btn {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background: url("media/ui-cross-close-b.svg");
+    z-index: 9;
+    transition: filter .5s ease;
+}
+
+#close-btn:hover {
+    filter: blur(2px);
 }
 
 .shutter-section {
     width: 100vw;
     margin: 0;
     position: relative;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 .this-grid {
@@ -92,8 +142,7 @@ img::selection {
     margin: 0;
     padding: 0;
     position: relative;
-    /* background-color: #000; */
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 .text-container {
@@ -133,14 +182,12 @@ img::selection {
     height: 100vh;
     margin: 0;
     position: relative;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
-.scroll-snap {
+/* .scroll-snap {
     scroll-snap-align: start;
-    width: 100vw;
-    height: 100vh;
-}
+} */
 
 .spotlight-text {
     position: absolute;
@@ -169,16 +216,16 @@ img::selection {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: rgba(255, 0, 85, 0.5);
+    background-color: #ff005580;
     filter: blur(50px);
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: difference;
     z-index: 1;
     cursor: crosshair;
 }
 
 @keyframes beat {
     0% { transform: scale(1); background-color: #000; }
-    100% { transform: scale(2); background-color: rgba(209, 80, 123, 0.1); }
+    100% { transform: scale(2); background-color: #ff00553f; }
 }
 
 .audio-wrapper {
@@ -207,14 +254,13 @@ img::selection {
     animation: beat 1s infinite linear reverse;
 }
 
-
-
-
 .library-section {
+    height: 100vh;
     margin: 0;
     position: relative;
     top: 0;
-    scroll-snap-align: start;
+    background-color: #fff;
+    /* scroll-snap-align: start; */
 }
 
 .library-section::before {
@@ -224,84 +270,43 @@ img::selection {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
     background-image: linear-gradient(180deg, #ff00559c, rgba(255, 255, 255, 0));
 }
 
 .library-container {
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-top: solid 1px #000;
-    position: relative;
 }
 
-.library-menu {
-    /* width: 50%; */
+.library-content {
+    width: 95vw;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin: 20px;
-}
-
-.library-menu li {
-    list-style-type: none;
-    margin-bottom: 2px;
-    text-transform: uppercase;
-    font-weight: 800;
-}
-
-.library-menu li a {
-    text-decoration: none;
-}
-
-.info-btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 50px;
-    background-color: #000;
-    filter: blur(5px);
-    cursor: pointer;
+    justify-content: flex-start;
 }
 
 .library-content-wrapper {
-    width: 65vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all .5s ease;
-}
-
-.close-btn {
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    background: url("media/ui-cross-close-b.svg");
-    z-index: 6;
-}
-
-#le-guin {
-    width: 30vw;
+    
+    width: 25vw;
 }
 
 .scrollable {
-    max-height: 70vh;
+    max-height: 100vh;
     overflow-y: scroll;
     margin-bottom: 0;
+    border: none;
+
+    background-color: transparent;
 }
 
-.library-content-wrapper.open {
-    opacity: 1;
-    pointer-events: all;
+.scrollable h2 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.scrollable p {
+    margin-top: 10px;
 }

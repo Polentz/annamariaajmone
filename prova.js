@@ -1,8 +1,6 @@
 window.addEventListener("load", function () {
-    openElement("kafka-btn", "kafka", "open");
-    openElement("le-guin-btn", "le-guin", "open");
-    openElement("del01-btn", "deleuze01", "open");
-    openElement("del02-btn", "deleuze02", "open");
+    openElement("info-btn", "project", "open");
+    openElement("close-btn", "project", "open");
 });
 function openElement(trigger, element, className) {
     document.getElementById(trigger).addEventListener("click", (event) => {
@@ -10,7 +8,6 @@ function openElement(trigger, element, className) {
         event.stopPropagation();
     });
 }
-
 
 const area = document.querySelector(".shutter-section");
 area.addEventListener("mousemove", (event) => {
@@ -27,7 +24,7 @@ function changeColor() {
     // console.log(scrollTop);
     const element = document.getElementById("content");
     const nav = document.querySelector(".grid-menu")
-    if (scrollTop < 2500) {
+    if (scrollTop < 2800) {
         element.style.backgroundColor = "#fff";
         nav.style.opacity = "1";
         nav.style.pointerEvents = "all";
@@ -57,7 +54,6 @@ function typewrite(target, text, loop, speed) {
         }
     }, speed);
 }
-
 
 const spot = document.getElementById("spotlight");
 const spotArea = document.querySelector(".spotlight-section");
