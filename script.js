@@ -80,38 +80,6 @@ spotArea.addEventListener("mousemove", (event) => {
     spot.style.top = y + "px";
 });
 
-// function sound() {
-//     const audio = document.getElementById("rec00-audio");
-//     if (audio.paused)
-//         audio.play();
-//     else
-//         audio.pause();
-// }
-
-// function sound() {
-//     const audio = document.getElementById("rec01-audio");
-//     if (audio.paused)
-//         audio.play();
-//     else
-//         audio.pause();
-// }
-
-// function sound() {
-//     const audio = document.getElementById("rec02-audio");
-//     if (audio.paused)
-//         audio.play();
-//     else
-//         audio.pause();
-// }
-
-// function sound() {
-//     const audio = document.getElementById("rec03-audio");
-//     if (audio.paused)
-//         audio.play();
-//     else
-//         audio.pause();
-// }
-
 
 
 

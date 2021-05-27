@@ -1,49 +1,11 @@
-@font-face {
-    font-family: "Messapia Regular";
-    src: url("font/Messapia-Regular.woff2") format("woff2"),
-         url("font/Messapia-Regular.woff") format("woff");
-}
-@font-face {
-    font-family: "Messapia Bold";
-    src: url("font/Messapia-Bold.woff2") format("woff2"),
-         url("font/Messapia-Bold.woff") format("woff");
-}
-
-p::selection,
-h1::selection,
-h2::selection,
-br::selection,
-span::selection,
-a::selection,
-li::selection,
-img::selection {
-    color: #ff0055;
-}
-
 #content {
     margin: 0;
     padding-top: 15vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y mandatory;
+    will-change: background-color;
     transition: background-color .5s ease;
-}
-
-.to-top-btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 50px;
-    background-color: #000;
-    filter: blur(1px);
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 23px;
-    transition: filter .5s ease;
-}
-
-.to-top-btn:hover {
-    filter: blur(5px);
 }
 
 .info {
@@ -92,7 +54,6 @@ img::selection {
     width: 100vw;
     margin: 0;
     position: relative;
-    /* scroll-snap-align: start; */
 }
 
 .this-grid {
@@ -151,7 +112,6 @@ img::selection {
     margin: 0;
     padding: 0;
     position: relative;
-    /* scroll-snap-align: start; */
 }
 
 .text-container {
@@ -162,41 +122,13 @@ img::selection {
     color: #fff;
 }
 
-/* .audio-wrapper {
-    display: flex;
-    width: 100vw;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 50%;
-    left: 20px;
-}
-
-.audio-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: solid 1px #fff;
-    margin-right: 50px;
-    z-index: 1;
-    cursor: pointer
-}
-
-.rec01 {
-    top: 5%;
-    left: 50%;
-} */
-
 .spotlight-section {
     width: 100vw;
     height: 100vh;
     margin: 0;
     position: relative;
-    /* scroll-snap-align: start; */
-}
-
-/* .scroll-snap {
     scroll-snap-align: start;
-} */
+}
 
 .spotlight-text {
     position: absolute;
@@ -210,7 +142,6 @@ img::selection {
 }
 
 .spotlight-text p {
-    /* font-size: calc(12px + 2vw); */
     text-align: center;
     
 }
@@ -245,6 +176,7 @@ img::selection {
     position: absolute;
     z-index: 5;
     cursor: pointer;
+    will-change: transform;
 }
 
 .rec00 {
@@ -276,18 +208,16 @@ img::selection {
 }
 
 .library-section {
-    height: 100vh;
     margin: 0;
     position: relative;
     top: 0;
     background-color: #fff;
-    /* scroll-snap-align: start; */
 }
 
 .library-section::before {
     content: '';
     width: 100%; 
-    height: 10vh;
+    height: 15vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -296,30 +226,47 @@ img::selection {
     background-image: linear-gradient(180deg, #ff00559c, rgba(255, 255, 255, 0));
 }
 
-.library-container {
+.library-title {
+    height: 5vh;
+    border-bottom: solid 1px #000;
+    position: relative;
+    z-index: 6;
+    padding: 0 25px 0 30px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    border-top: solid 1px #000;
+}
+
+.to-top-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #000;
+    filter: blur(1px);
+    cursor: pointer;
+    transition: filter .5s ease;
+}
+
+.to-top-btn:hover {
+    filter: blur(5px);
 }
 
 .library-content {
     width: 95vw;
+    height: 95vh;
     display: flex;
     justify-content: flex-start;
 }
 
 .library-content-wrapper {
-    
     width: 25vw;
 }
 
 .scrollable {
-    max-height: 100vh;
+    max-height: 95vh;
     overflow-y: scroll;
     margin-bottom: 0;
     border: none;
-
     background-color: transparent;
 }
 
