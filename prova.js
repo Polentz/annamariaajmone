@@ -1,11 +1,27 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
     openElement("info-btn", "project", "open");
     openElement("close-btn", "project", "open");
+
+    sound("rec00", "rec00-audio");
+    sound("rec01", "rec01-audio");
+    sound("rec02", "rec02-audio");
+    sound("rec03", "rec03-audio");
 });
+
 function openElement(trigger, element, className) {
     document.getElementById(trigger).addEventListener("click", (event) => {
         document.getElementById(element).classList.toggle(className);
         event.stopPropagation();
+    });
+}
+
+function sound(button, element) {
+    document.getElementById(button).addEventListener("click", () => {
+        const audio = document.getElementById(element);
+        if (audio.paused)
+            audio.play();
+        else
+            audio.pause();
     });
 }
 
@@ -63,5 +79,39 @@ spotArea.addEventListener("mousemove", (event) => {
     spot.style.left = x + "px";
     spot.style.top = y + "px";
 });
+
+// function sound() {
+//     const audio = document.getElementById("rec00-audio");
+//     if (audio.paused)
+//         audio.play();
+//     else
+//         audio.pause();
+// }
+
+// function sound() {
+//     const audio = document.getElementById("rec01-audio");
+//     if (audio.paused)
+//         audio.play();
+//     else
+//         audio.pause();
+// }
+
+// function sound() {
+//     const audio = document.getElementById("rec02-audio");
+//     if (audio.paused)
+//         audio.play();
+//     else
+//         audio.pause();
+// }
+
+// function sound() {
+//     const audio = document.getElementById("rec03-audio");
+//     if (audio.paused)
+//         audio.play();
+//     else
+//         audio.pause();
+// }
+
+
 
 

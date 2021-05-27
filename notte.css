@@ -58,6 +58,15 @@ img::selection {
     transition: all .5s ease;
 }
 
+.caption-wrapper {
+    font-size: 11px;
+    margin-top: 30px;
+}
+
+.caption-wrapper p {
+    margin: 0;
+}
+
 .info.open {
     opacity: 1;
     pointer-events: all;
@@ -196,7 +205,6 @@ img::selection {
     transform: translate(-50%, -50%);
     z-index: 5;
     width: 60vw;
-    padding: 50px;
     color: #000;
     cursor: crosshair;
 }
@@ -209,7 +217,7 @@ img::selection {
 
 #spotlight {
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
     transform: translate(-50%, -50%);
     transform-origin: center;
@@ -218,7 +226,7 @@ img::selection {
     border-radius: 50%;
     background-color: #ff005580;
     filter: blur(50px);
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     z-index: 1;
     cursor: crosshair;
 }

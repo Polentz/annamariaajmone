@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>La notte è il mio giorno preferito</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
@@ -32,6 +33,10 @@
                     Roland Metral (forest engineer) generously guided me, together with set designer Natalia Trejbalova
                     and dramaturg Stella Succi, to discover Val d'Illiez' ecosystem, its forest's precious balance, its
                     animals' tracks.</p>
+                <div class="caption-wrapper">
+                    <p>Design & Code Giulia Polenta</p>
+                    <p>© 2021 Annamaria Ajmone</p>
+                </div>
             </div>
             <div id="close-btn"></div>
         </div>
@@ -221,9 +226,12 @@
                     <img src="media/la-notte/IMG_0727.jpg" width="100%">
                 </div>
             </div>
-            <div class="audio-wrapper rec00">
-                <a id="rec00"></a>
-                <audio id="rec00-audio" src="media/la-notte/pelle-lupo.mp3"></audio>
+            <div class="audio-wrapper rec00" id="rec00" value="play">
+                <audio id="rec00-audio">
+                    <source src="media/la-notte/pelle-lupo.ogg" type="audio/ogg">
+                    <source src="media/la-notte/pelle-lupo.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </section>
 
@@ -234,19 +242,28 @@
                     <p>During the night, the forest is noisy. Animals wake us up, trying to break
                         into the house.</p>
                 </div>
-                <div class="audio-wrapper rec01">
-                    <a id="rec01"></a>
-                    <audio id="rec01-audio" src="media/la-notte/animal-call01.mp3"></audio>
+                <div class="audio-wrapper rec01" id="rec01" value="play" volume="1">
+                    <audio id="rec01-audio">
+                        <source src="media/la-notte/animal-call01.ogg" type="audio/ogg">
+                        <source src="media/la-notte/animal-call01.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
 
-                <div class="audio-wrapper rec02">
-                    <a id="rec02"></a>
-                    <audio id="rec02-audio" src="media/la-notte/animal-call02.mp3"></audio>
+                <div class="audio-wrapper rec02" id="rec02" value="play">
+                    <audio id="rec02-audio">
+                        <source src="media/la-notte/walk-calls.ogg" type="audio/ogg">
+                        <source src="media/la-notte/walk-calls.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
 
-                <div class="audio-wrapper rec03">
-                    <a id="rec03"></a>
-                    <audio id="rec03-audio" src="media/la-notte/walk-calls.mp3"></audio>
+                <div class="audio-wrapper rec03" id="rec03" value="play">
+                    <audio id="rec03-audio">
+                        <source src="media/la-notte/animal-call02.ogg" type="audio/ogg">
+                        <source src="media/la-notte/animal-call02.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
             </div>
         </section>
