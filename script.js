@@ -34,24 +34,26 @@ area.addEventListener("mousemove", (event) => {
     element.style.width = xX + "%";
 });
 
-window.onscroll = function () { changeColor() };
-function changeColor() {
-    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-    // console.log(scrollTop);
-    const element = document.getElementById("content");
-    const nav = document.querySelector(".grid-menu")
-    if (scrollTop < 2800) {
-        element.style.backgroundColor = "#fff";
-        nav.style.opacity = "1";
-        nav.style.pointerEvents = "all";
-    } else {
-        element.style.backgroundColor = "#000";
+function inViewport(element) {
+    const bb = element.getBoundingClientRect();
+    return !(bb.top > innerHeight || bb.bottom < 0);
+}
+const target = document.querySelector(".section-wrapper");
+const element = document.querySelector(".content");
+const nav = document.querySelector(".grid-menu")
+document.addEventListener("scroll", () => {
+    if (inViewport(target)) {
+        element.style.background = "#000";
         nav.style.opacity = "0";
         nav.style.pointerEvents = "none";
+    } else {
+        element.style.background = "";
+        nav.style.opacity = "1";
+        nav.style.pointerEvents = "all";
     }
-};
+});
 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
     typewrite("text-a", "Roland Hammel tells us how wolves rather hunt sheep than deers and keep attacking until everything around is quiet again.                          ", true, 50);
 });
 function typewrite(target, text, loop, speed) {

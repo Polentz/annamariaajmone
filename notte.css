@@ -1,15 +1,19 @@
+section {
+    width: 100vw;
+    margin: 0;
+}
+
 #content {
     margin: 0;
     padding-top: 15vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
     will-change: background-color;
     transition: background-color .5s ease;
 }
 
 .info {
-    width: 25vw;
+    width: 30vw;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -51,9 +55,8 @@
 }
 
 .shutter-section {
-    width: 100vw;
-    margin: 0;
     position: relative;
+    padding-bottom: 18vh;
 }
 
 .this-grid {
@@ -106,11 +109,12 @@
     background-size: contain;
 }
 
+.section-wrapper {
+    scroll-snap-type: y mandatory;
+}
+
 .night-section {
     height: auto;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
     position: relative;
 }
 
@@ -123,9 +127,7 @@
 }
 
 .spotlight-section {
-    width: 100vw;
     height: 100vh;
-    margin: 0;
     position: relative;
     scroll-snap-align: start;
 }
@@ -208,7 +210,6 @@
 }
 
 .library-section {
-    margin: 0;
     position: relative;
     top: 0;
     background-color: #fff;
@@ -259,7 +260,7 @@
 }
 
 .library-content-wrapper {
-    width: 25vw;
+    width: 20%;
 }
 
 .scrollable {
@@ -277,4 +278,104 @@
 
 .scrollable p {
     margin-top: 10px;
+}
+
+/* first breackpoint ---> next 600px mobile */
+@media screen and (max-width: 915px) {
+    .grid-menu {
+        display: grid;
+    }
+    .menu-links a:last-child {
+        margin-right: 20px;
+    }
+    .info {
+        width: 75vw;
+    }
+    .hide-on-tablet {
+        display: none;
+    }
+    section {
+        padding: 0;
+    }
+    .this-grid-column p {
+        margin: 20px 5px;
+    }
+    .text-container {
+        margin: 0;
+        padding: 20px;
+        height: 10vh;
+    }
+    .library-content {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .library-content-wrapper {
+        width: 50%;
+    }
+    .library-title {
+        border: none;
+    }
+    .scrollable {
+        max-height: none;
+        height: auto;
+        border: 1px solid #000;
+        margin: 5px;
+        overflow-y: hidden;
+    }
+    .library-container {
+        padding: 20px 0;
+    }
+}
+
+/* last breackpoint ---> mobile */ 
+@media screen and (max-width: 600px) {
+    img {
+        margin-bottom: 12px;
+    }
+    .menu-links a:last-child {
+        margin-right: 12px;
+        margin-left: 0;
+    }
+    .info {
+        width: calc(100vw - 24px);
+    }
+    .scroll-on-mobile {
+        height: calc(100vh - 24px);
+        overflow-y: scroll;
+        margin-bottom: 0;
+    }
+    .this-grid {
+        display: block;
+        padding: 0 12px; 
+    }
+    .this-grid-column {
+        width: 100%;
+        padding: 0;    
+    }
+    .map {
+        background-image: none;
+    }
+    .map-on-mobile {
+        background-image: url(media/la-notte/fiume.svg);
+        background-position: 25% 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .text-container {
+        margin: 0;
+        padding: 12px;
+        height: 15vh;
+    }
+    .library-title {
+        padding: 0 10px;
+    }
+    .library-content {
+        width: calc(100vw - 10px);
+    }
+    .library-content-wrapper {
+        width: 100%;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
 }
