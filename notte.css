@@ -361,6 +361,9 @@ section {
         background-repeat: no-repeat;
         background-size: contain;
     }
+    #spotlight {
+        display: none;
+    }
     .text-container {
         margin: 0;
         padding: 12px;
