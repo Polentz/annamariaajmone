@@ -59,6 +59,10 @@ section {
     padding-bottom: 18vh;
 }
 
+.switch-btn {
+    display: none;
+}
+
 .this-grid {
     width: 100vw;
     display: flex;
@@ -146,6 +150,10 @@ section {
 .spotlight-text p {
     text-align: center;
     
+}
+
+.spotlight-text p:nth-child(2) {
+    display: none;
 }
 
 #spotlight {
@@ -241,7 +249,7 @@ section {
 .to-top-btn {
     width: 20px;
     height: 20px;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: #000;
     filter: blur(1px);
     cursor: pointer;
@@ -280,7 +288,7 @@ section {
     margin-top: 10px;
 }
 
-/* first breackpoint ---> next 600px mobile */
+/* first breackpoint ---> tablet */
 @media screen and (max-width: 915px) {
     .grid-menu {
         display: grid;
@@ -303,7 +311,7 @@ section {
     .text-container {
         margin: 0;
         padding: 20px;
-        height: 10vh;
+        height: 15vh;
     }
     .library-content {
         height: auto;
@@ -329,8 +337,40 @@ section {
 
 /* last breackpoint ---> mobile */ 
 @media screen and (max-width: 600px) {
-    img {
-        margin-bottom: 12px;
+    .page-label {
+        display: none;
+    }
+    .switch-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ff0055;
+        mix-blend-mode: difference;
+        filter: blur(1px);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+    }
+    .second-layer {
+        width: 0% !important;
+        left: 0;
+        transition: all .5s ease;
+    }
+    .second-layer.make-first {
+        width: 100% !important;
+    }
+    .first-layer {
+        opacity: 1;
+        transition: opacity .5s ease;
+    }
+    .first-layer.hide {
+        opacity: 0;
+    }
+    .white {
+        background-color: transparent;
     }
     .menu-links a:last-child {
         margin-right: 12px;
@@ -345,35 +385,50 @@ section {
         margin-bottom: 0;
     }
     .this-grid {
-        display: block;
-        padding: 0 12px; 
+        padding: 0 12px;
+        flex-wrap: wrap; 
     }
     .this-grid-column {
-        width: 100%;
-        padding: 0;    
+        width: 50%;
+        padding: 5px;   
+    }
+    .this-grid-column p {
+        margin: 0;
     }
     .map {
         background-image: none;
     }
-    .map-on-mobile {
+    .map-mobile {
         background-image: url(media/la-notte/fiume.svg);
-        background-position: 25% 0;
+        background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: contain;
     }
     #spotlight {
         display: none;
     }
+    .rec00 {
+        top: 105%;
+        left: 70%;
+    }
+    .spotlight-text p {
+        color: #fff;
+    }
+    .spotlight-text p:nth-child(2) {
+        display: block;
+        margin-top: 20px;
+        font-size: 9px;
+    }
     .text-container {
         margin: 0;
         padding: 12px;
-        height: 15vh;
+        height: 35vh;
     }
     .library-title {
         padding: 0 10px;
     }
     .library-content {
-        width: calc(100vw - 10px);
+        width: 100vw;
     }
     .library-content-wrapper {
         width: 100%;

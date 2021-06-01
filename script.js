@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
     sound("rec01", "rec01-audio");
     sound("rec02", "rec02-audio");
     sound("rec03", "rec03-audio");
+
+    mobileOpen("switch", "second-layer", "make-first", "first-layer", "hide");
 });
 
 function openElement(trigger, element, className) {
@@ -25,6 +27,14 @@ function sound(button, element) {
     });
 }
 
+function mobileOpen(trigger, element, className, otherElement, otherClassName) {
+    document.getElementById(trigger).addEventListener("click", (event) => {
+        document.getElementById(element).classList.toggle(className);
+        document.getElementById(otherElement).classList.toggle(otherClassName);
+        event.stopPropagation();
+    });
+}
+
 const area = document.querySelector(".shutter-section");
 area.addEventListener("mousemove", (event) => {
     let wW = document.body.clientWidth;
@@ -40,16 +50,19 @@ function inViewport(element) {
 }
 const target = document.querySelector(".section-wrapper");
 const element = document.querySelector(".content");
-const nav = document.querySelector(".grid-menu")
+const nav = document.querySelector(".grid-menu");
+const btn = document.querySelector(".switch-btn")
 document.addEventListener("scroll", () => {
     if (inViewport(target)) {
         element.style.background = "#000";
         nav.style.opacity = "0";
         nav.style.pointerEvents = "none";
+        btn.style.opacity = "0";
     } else {
         element.style.background = "";
         nav.style.opacity = "1";
         nav.style.pointerEvents = "all";
+        btn.style.opacity = "1";
     }
 });
 

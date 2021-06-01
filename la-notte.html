@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="notte.css">
 </head>
 
-<body id="top">
+<body id="la-notte">
 
     <div class="page-label">
         <p style="letter-spacing: 10px;">La notte è il mio giorno preferito</p>
@@ -62,8 +62,9 @@
     <div class="content initial" id="content">
 
         <section class="shutter-section">
-            <div class="first-layer">
-                <div class="this-grid map">
+            <div class="switch-btn" id="switch"></div>
+            <div class="first-layer" id="first-layer">
+                <div class="this-grid map map-mobile">
                     <div class="this-grid-column">
                         <img src="media/la-notte/IMG_0697.jpg" width="100%">
                     </div>
@@ -73,7 +74,7 @@
                     </div>
                     <div class="this-grid-column">
                         <img src="media/la-notte/IMG_0784.jpg" width="100%">
-                        <img src="media/la-notte/blank.png" width="100%" class="need-margin map-on-mobile">
+                        <img src="media/la-notte/blank.png" width="100%" class="need-margin">
                     </div>
                     <div class="this-grid-column">
                         <img src="media/la-notte/IMG_0757.jpg" width="100%">
@@ -113,8 +114,6 @@
                     <div class="this-grid-column">
                         <p>The valley is inhabited by men for thousands of years. Wood and
                             animals have been essential resources to exploit and tame.</p>
-                        <p>There’s no such thing as natural forest here. What we see is
-                            techno-nature. Humans are a species.</p>
                     </div>
                 </div>
 
@@ -125,13 +124,15 @@
                         <img src="media/la-notte/IMG_0723.jpg" width="100%" style="position: relative; left: 2px;">
                     </div>
                     <div class="this-grid-column">
+                        <p>There’s no such thing as natural forest here. What we see is
+                            techno-nature. Humans are a species.</p>
                     </div>
                     <div class="this-grid-column">
                     </div>
                 </div>
             </div>
 
-            <div class="second-layer">
+            <div class="second-layer" id="second-layer">
                 <div class="this-grid map white">
                     <div class="this-grid-column">
                         <img src="media/la-notte/IMG_0725.jpg" width="100%">
@@ -163,8 +164,6 @@
                     </div>
                     <div class="this-grid-column">
                         <img src="media/la-notte/IMG_0785.jpg" width="100%">
-                        <!-- <p>Val d’Illiez’ forest is populated by too many deers. They love eating silver pine: an
-                            autochthonous tree species that is now struggling to survive.</p> -->
                     </div>
                     <div class="this-grid-column large-column">
                         <img src="media/la-notte/IMG_0753.jpg" width="100%">
@@ -250,6 +249,7 @@
                 <div class="spotlight-text">
                     <p>During the night, the forest is noisy. Animals wake us up, trying to break
                         into the house.</p>
+                    <p>(turn the volume up and tap the spotlights)</p>
                 </div>
                 <div class="audio-wrapper rec01" id="rec01" value="play" volume="1">
                     <audio id="rec01-audio">
@@ -280,7 +280,7 @@
                 <div class="library-container">
                     <div class="library-title">
                         <h1>Reading room</h1>
-                        <a href="#top">
+                        <a href="#la-notte">
                             <div class="to-top-btn"></div>
                         </a>
                     </div>
