@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
     sound("rec02", "rec02-audio");
     sound("rec03", "rec03-audio");
 
-    mobileOpen("switch", "second-layer", "make-first", "first-layer", "hide");
+    mobileVersion("switch", "second-layer", "make-first", "first-layer", "hide");
 });
 
 function openElement(trigger, element, className) {
@@ -27,7 +27,7 @@ function sound(button, element) {
     });
 }
 
-function mobileOpen(trigger, element, className, otherElement, otherClassName) {
+function mobileVersion(trigger, element, className, otherElement, otherClassName) {
     document.getElementById(trigger).addEventListener("click", (event) => {
         document.getElementById(element).classList.toggle(className);
         document.getElementById(otherElement).classList.toggle(otherClassName);
