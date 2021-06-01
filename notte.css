@@ -346,7 +346,7 @@ section {
         height: 30px;
         border-radius: 50%;
         background-color: #ff0055;
-        mix-blend-mode: overlay;
+        mix-blend-mode: difference;
         filter: blur(1px);
         position: fixed;
         top: 50%;
@@ -364,7 +364,7 @@ section {
     }
     .first-layer {
         opacity: 1;
-        transition: opacity .5s ease;
+        transition: opacity .5s .2s ease;
     }
     .first-layer.hide {
         opacity: 0;
