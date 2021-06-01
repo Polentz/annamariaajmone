@@ -346,7 +346,7 @@ section {
         height: 30px;
         border-radius: 50%;
         background-color: #ff0055;
-        mix-blend-mode: difference;
+        mix-blend-mode: overlay;
         filter: blur(1px);
         position: fixed;
         top: 50%;
