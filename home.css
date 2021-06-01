@@ -35,5 +35,7 @@ footer {
     .lower label {
         color: #fff;
     }
+    .hide-on-mobile {
+        display: none;
+    }
 }
-
