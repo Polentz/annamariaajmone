@@ -13,3 +13,11 @@ function scrollPage(element, className) {
         document.getElementById(element).classList.add(className);
     });
 }
+
+const element = document.getElementById("this-trigger");
+element.addEventListener("mouseenter", () => {
+    document.getElementById("this-show").classList.add("color");
+});
+element.addEventListener("mouseleave", () => {
+    document.getElementById("this-show").classList.remove("color");
+});

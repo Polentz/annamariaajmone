@@ -119,6 +119,11 @@ section {
     z-index: 2;
 }
 
+.need-align {
+    position: relative; 
+    left: 2px;
+}
+
 .white {
     background-color: #fff;
 }
@@ -256,6 +261,7 @@ section {
     position: relative;
     top: 0;
     background-color: #fff;
+    z-index: 9999;
 }
 
 .library-section::before {
@@ -310,7 +316,7 @@ section {
 }
 
 .library-content {
-    width: 95vw;
+    width: 100vw;
     height: 95vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -442,7 +448,7 @@ section {
         width: calc(100vw - 24px);
     }
     .scroll-on-mobile {
-        height: calc(100vh - 24px);
+        height: 85vh;
         overflow-y: scroll;
         margin-bottom: 0;
     }
