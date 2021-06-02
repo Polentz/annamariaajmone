@@ -786,11 +786,11 @@ section {
     #op:checked~.overlay-hugeinc div ul {
         opacity: 1;
         -webkit-transform: rotateX(0deg);
-        transform: rotateX(0deg);
+                transform: rotateX(0deg);
     }
     #op:not(:checked)~.overlay-hugeinc div ul {
         -webkit-transform: translateY(25%) rotateX(-35deg);
-        transform: translateY(25%) rotateX(-35deg);
+                transform: translateY(25%) rotateX(-35deg);
     }
     /* end menu mobile style */
 

@@ -4,6 +4,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+
+}
+
+.main div:nth-child(1) {
+    cursor: crosshair;
+}
+
+.main div:nth-child(2) {
+    cursor: default;
 }
 
 a,
@@ -80,7 +89,7 @@ footer {
     background-size: cover;
 
     z-index: -1;
-    cursor: crosshair;
+    
 }
 
 @media screen and (max-width: 915px) {
