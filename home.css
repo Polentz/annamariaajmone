@@ -31,6 +31,62 @@ footer {
     mix-blend-mode: difference; 
 }
 
+@-webkit-keyframes breathing {
+    0% { opacity: 0.05; }
+    100% { opacity: 1; }
+}
+
+@keyframes breathing {
+    0% { opacity: 0.05; }
+    100% { opacity: 1; }
+}
+
+.breathing {
+    -webkit-animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
+            animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
+}
+
+.breathing a:hover {
+    text-decoration: none;
+}
+
+#this-show.color {
+    color: #ff0055bb;
+}
+
+#this-show {
+    transition: color .5s ease;
+}
+
+#spotlight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    width: 400px;
+    height: 400px;
+
+    opacity: 0.95;
+    
+    mix-blend-mode: difference;
+    background-image: url(media/la-notte/spotlight.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 1;
+    cursor: crosshair;
+}
+
+.intro {
+    z-index: 5;
+}
+
 @media screen and (max-width: 915px) {
     .lower label {
         color: #fff;

@@ -21,3 +21,11 @@ element.addEventListener("mouseenter", () => {
 element.addEventListener("mouseleave", () => {
     document.getElementById("this-show").classList.remove("color");
 });
+
+const spot = document.getElementById("spotlight");
+window.addEventListener("mousemove", (event) => {
+    let x = event.clientX;
+    let y = event.clientY;
+    spot.style.left = x + "px";
+    spot.style.top = y + "px";
+});

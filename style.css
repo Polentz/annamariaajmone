@@ -53,46 +53,6 @@ img::selection {
     color: #ff0055;
 }
 
-@-webkit-keyframes breathing {
-    0% { opacity: 0.05; }
-    100% { opacity: 1; }
-}
-
-@keyframes breathing {
-    0% { opacity: 0.05; }
-    100% { opacity: 1; }
-}
-
-.breathing {
-    -webkit-animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
-            animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
-}
-
-.breathing a:hover {
-    text-decoration: none;
-}
-
-#this-show.color {
-    color:#ff0055;
-}
-
-#this-show {
-    transition: color .5s ease;
-}
-
-.loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 8;
-    opacity: 1;
-    -webkit-transition: all 2s ease-in;
-    -o-transition: all 2s ease-in;
-    transition: all 2s ease-in;
-}
-
 .loading.hidden {
     opacity: 0;
     pointer-events: none;
