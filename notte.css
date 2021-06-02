@@ -191,13 +191,17 @@ section {
     -webkit-transform-origin: center;
         -ms-transform-origin: center;
             transform-origin: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #ff005580;
-    -webkit-filter: blur(50px);
-            filter: blur(50px);
-    /* mix-blend-mode: difference; */
+    width: 400px;
+    height: 400px;
+
+    opacity: 0.95;
+    
+    mix-blend-mode: difference;
+    background-image: url(media/la-notte/spotlight.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     z-index: 1;
     cursor: crosshair;
 }
@@ -473,9 +477,9 @@ section {
         background-repeat: no-repeat;
         background-size: contain;
     }
-    #spotlight {
+    /* #spotlight {
         display: none;
-    }
+    } */
     .rec00 {
         top: 105%;
         left: 70%;
