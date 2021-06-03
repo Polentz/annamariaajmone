@@ -24,8 +24,8 @@ element.addEventListener("mouseleave", () => {
 
 const spot = document.getElementById("spotlight");
 window.addEventListener("mousemove", (event) => {
-    let x = event.clientX;
-    let y = event.clientY;
+    let x = event.pageX;
+    let y = event.pageY;
     spot.style.left = x + "px";
     spot.style.top = y + "px";
 });
