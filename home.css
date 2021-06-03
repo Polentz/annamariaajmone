@@ -80,7 +80,7 @@ footer {
 
     opacity: 0.95;
     
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
     background-image: url(media/la-notte/spotlight.svg);
     background-position: center;
     background-repeat: no-repeat;
