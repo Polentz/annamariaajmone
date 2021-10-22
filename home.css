@@ -5,7 +5,6 @@
     background-size: cover;
     color: #fff;
     cursor: crosshair;
-
 }
 
 a,
@@ -87,7 +86,10 @@ footer {
     background-size: cover;
 
     z-index: -1;
-    
+}
+
+.spotlight-container {
+    overflow: hidden;
 }
 
 @media screen and (max-width: 915px) {

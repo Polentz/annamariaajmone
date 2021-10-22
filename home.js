@@ -29,3 +29,4 @@ window.addEventListener("mousemove", (event) => {
     spot.style.left = x + "px";
     spot.style.top = y + "px";
 });
+

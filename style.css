@@ -38,7 +38,10 @@ br::-moz-selection,
 span::-moz-selection, 
 a::-moz-selection, 
 li::-moz-selection, 
-img::-moz-selection {
+img::-moz-selection,
+audio::-moz-selection,
+video::-moz-selection,
+div::-moz-selection {
     color: #ff0055;
 }
 
@@ -49,7 +52,10 @@ br::selection,
 span::selection,
 a::selection,
 li::selection,
-img::selection {
+img::selection,
+audio::selection,
+video::selection,
+div::selection {
     color: #ff0055;
 }
 
