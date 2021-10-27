@@ -2,16 +2,26 @@ window.addEventListener("load", () => {
     openElement("info-btn", "project", "open");
     openElement("close-btn", "project", "open");
 
-    sound("rec00", "rec00-audio");
-    sound("rec01", "rec01-audio");
-    sound("rec02", "rec02-audio");
-    sound("rec03", "rec03-audio");
-    sound("rec04", "rec04-audio");
-    sound("rec05", "rec05-audio");
+    soundElement("rec00", "rec00-audio");
+    soundElement("rec01", "rec01-audio");
+    soundElement("rec02", "rec02-audio");
+    soundElement("rec03", "rec03-audio");
+    soundElement("rec04", "rec04-audio");
+    soundElement("rec05", "rec05-audio");
 
     mobileVersion("switch", "second-layer", "make-first", "first-layer", "hide");
 
     typewriter("text-a", typewriterText, 75);
+
+    videoElement("video01-btn", "video01");
+    videoElement("video02-btn", "video02");
+    videoElement("video03-btn", "video03");
+    videoElement("video04-btn", "video04");
+    videoElement("video05-btn", "video05");
+    videoElement("video06-btn", "video06");
+    videoElement("video07-btn", "video07");
+
+    // dragElements("drag-me");
 });
 
 function openElement(trigger, element, className) {
@@ -21,7 +31,7 @@ function openElement(trigger, element, className) {
     });
 }
 
-function sound(button, element) {
+function soundElement(button, element) {
     document.getElementById(button).addEventListener("click", () => {
         const audio = document.getElementById(element);
         if (audio.paused)
@@ -54,6 +64,22 @@ const typewriter = (target, text, speed) => {
         }
         pointer++;
     }, speed);
+}
+
+function videoElement(button, element) {
+    document.getElementById(button).addEventListener("click", () => {
+        const video = document.getElementById(element);
+        video.muted = !video.muted;
+        video.classList.toggle("highlight");
+
+        const videoButton = document.getElementById(button);
+        if (videoButton.innerHTML == "UNMUTE") {
+            videoButton.innerHTML = "MUTE";
+        }
+        else {
+            videoButton.innerHTML = "UNMUTE";
+        }
+    });
 };
 
 // shutter effect
@@ -114,16 +140,16 @@ anchorTags.forEach(link => {
     });
 });
 
-function togglePlay(id) {
-    const video = document.getElementById(id);
-    video.muted = !video.muted;
-    video.classList.toggle("highlight");
-    // if (video.paused) {
-    //     video.play();
-    // } else {
-    //     video.pause();
-    // }
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
