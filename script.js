@@ -144,13 +144,10 @@ const longTexts = document.querySelectorAll(".library-content-wrapper")
 longTexts.forEach(text => {
     const opener = text.querySelector(".library-title")
     opener.addEventListener("click", () => {
-        // close all the other sections
-        [...longTexts].filter(q => q !== text).forEach(q => q.classList.remove("opened"))
-
-        // then open the current section
-        text.classList.toggle("opened")
+        [...longTexts].filter(q => q !== text).forEach(q => q.classList.remove("opened"));
+        text.classList.toggle("opened");
     })
-})
+});
 
 
 

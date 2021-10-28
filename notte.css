@@ -622,10 +622,13 @@ section {
         left: 70%;
     }
     .spotlight-text p:nth-child(2) {
-        font-size: 10px;
+        font-size: 12px;
     }
     .hide-on-desktop {
         display: block;
+    }
+    .section-title {
+        height: 11vh;
     }
     .text-container {
         margin: 0;
@@ -640,6 +643,7 @@ section {
     }
     .library-content {
         width: 100vw;
+        height: 85vh;
         margin-bottom: 10px;
     }
     .library-content-wrapper {
