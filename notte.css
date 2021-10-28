@@ -502,7 +502,13 @@ section {
     .text-container {
         margin: 0;
         padding: 20px;
-        height: 50vh;
+        height: 80vh;
+    }
+    .spotlight-text p:nth-child(2) {
+        display: block;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #fff;
     }
     .library-content {
         height: auto;
@@ -521,9 +527,6 @@ section {
         border: 1px solid #000;
         margin: 5px;
         overflow-y: hidden;
-    }
-    .library-container {
-        padding: 20px 0;
     }
 }
 
@@ -592,6 +595,9 @@ section {
         width: 50%;
         padding: 5px;   
     }
+    .full-on-mobile {
+        width: 100%;
+    }
     .shutter-section p {
         margin: 0;
     }
@@ -604,24 +610,20 @@ section {
         background-repeat: no-repeat;
         background-size: contain;
     }
-    /* #spotlight {
-        display: none;
-    } */
     .rec00 {
         top: 105%;
         left: 70%;
     }
-    .spotlight-text p {
-        font-size: 9px;
-        color: #fff;
-    }
     .spotlight-text p:nth-child(2) {
-        display: block;
-        margin-top: 20px;
+        font-size: 10px;
     }
     .text-container {
         margin: 0;
         padding: 12px;
+        height: 50vh;
+    }
+    .text-container p {
+        margin-bottom: 20px;
     }
     .library-title {
         padding: 0 10px;
