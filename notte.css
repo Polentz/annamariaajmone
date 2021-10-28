@@ -478,6 +478,10 @@ section {
     margin-bottom: 10px;
 }
 
+.hide-on-desktop {
+    display: none;
+}
+
 /* first breackpoint ---> tablet */
 @media screen and (max-width: 915px) {
     .grid-menu {
@@ -620,6 +624,9 @@ section {
     .spotlight-text p:nth-child(2) {
         font-size: 10px;
     }
+    .hide-on-desktop {
+        display: block;
+    }
     .text-container {
         margin: 0;
         padding: 12px;
@@ -628,16 +635,20 @@ section {
     .text-container p {
         margin-bottom: 20px;
     }
-    .library-title {
-        padding: 0 10px;
+    .library-text {
+        display: none;
     }
     .library-content {
         width: 100vw;
+        margin-bottom: 10px;
     }
     .library-content-wrapper {
         width: 100%;
     }
     .hide-on-mobile {
         display: none;
+    }
+    .library-content-wrapper.opened div.library-text {
+        display: block;
     }
 }
