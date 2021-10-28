@@ -74,22 +74,12 @@ footer {
     -webkit-transform-origin: center;
         -ms-transform-origin: center;
             transform-origin: center;
-    width: 400px;
-    height: 400px;
-
     opacity: 0.95;
-    
     mix-blend-mode: exclusion;
     background-image: url(media/la-notte/spotlight.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-
     z-index: -1;
-}
-
-.spotlight-container {
-    overflow: hidden;
 }
 
 @media screen and (max-width: 915px) {
