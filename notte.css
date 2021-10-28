@@ -550,7 +550,7 @@ section {
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-        z-index: 999;
+        z-index: 3;
     }
     .second-layer {
         width: 0% !important;
@@ -600,6 +600,9 @@ section {
     }
     .shutter-section p {
         margin: 0;
+    }
+    .need-margin-mobile {
+        margin-bottom: 100px;
     }
     .map {
         background-image: none;
