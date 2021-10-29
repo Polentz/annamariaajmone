@@ -642,9 +642,10 @@ section {
         display: none;
     }
     .library-content {
+        display: block;
         width: 100vw;
-        height: 85vh;
-        margin-bottom: 10px;
+        height: auto;
+        margin-bottom: 60px;
     }
     .library-content-wrapper {
         width: 100%;
