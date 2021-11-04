@@ -101,7 +101,7 @@ const section = document.querySelector(".section-wrapper");
 const content = document.querySelector(".content");
 const menu = document.querySelector(".grid-menu");
 const btn = document.querySelector(".switch-btn");
-const label = document.querySelector(".page-label")
+// const label = document.querySelector(".page-label");
 const cursor = document.getElementById("spotlight");
 
 document.addEventListener("scroll", () => {
@@ -109,7 +109,7 @@ document.addEventListener("scroll", () => {
         content.style.background = "#000";
         menu.style.display = "none";
         btn.style.opacity = "0";
-        label.style.display = "none";
+        // label.style.display = "none";
         cursor.style.display = "";
         // get cursor
         window.addEventListener("mousemove", (event) => {
@@ -122,7 +122,7 @@ document.addEventListener("scroll", () => {
         content.style.background = "";
         menu.style.display = "";
         btn.style.opacity = "1";
-        label.style.display = "";
+        // label.style.display = "";
         cursor.style.display = "none";
     }
 });

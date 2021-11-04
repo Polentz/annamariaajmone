@@ -536,9 +536,9 @@ section {
 
 /* last breackpoint ---> mobile */ 
 @media screen and (max-width: 600px) {
-    .page-label {
+    /* .page-label {
         display: none;
-    }
+    } */
     .switch-btn {
         display: block;
         width: 30px;

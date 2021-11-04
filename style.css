@@ -557,6 +557,20 @@ section {
     font-weight: 700;
 }
 
+.visual-notte {
+    position: absolute;
+    top: 15vh;
+    right: 10vw;
+    z-index: 1;
+    width: 33%;
+    height: 100%;
+    margin-right: 20px;
+    background-image: url(media/la-notte-visual.svg);
+    background-position: 100% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .visual-segreto {
     position: absolute;
     top: 60%;

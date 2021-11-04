@@ -14,13 +14,13 @@ function scrollPage(element, className) {
     });
 }
 
-const element = document.getElementById("this-trigger");
-element.addEventListener("mouseenter", () => {
-    document.getElementById("this-show").classList.add("color");
-});
-element.addEventListener("mouseleave", () => {
-    document.getElementById("this-show").classList.remove("color");
-});
+// const element = document.getElementById("this-trigger");
+// element.addEventListener("mouseenter", () => {
+//     document.getElementById("this-show").classList.add("color");
+// });
+// element.addEventListener("mouseleave", () => {
+//     document.getElementById("this-show").classList.remove("color");
+// });
 
 const spot = document.getElementById("spotlight");
 window.addEventListener("mousemove", (event) => {
