@@ -901,7 +901,8 @@ section {
     .lower {
         right: 12px;
     }
-    .visual-segreto {
+    .visual-segreto,
+    .visual-notte {
         display: none;
     }
     .page-label {
