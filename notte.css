@@ -1,6 +1,45 @@
+.start-section,
+#la-notte,
+.shutter-section,
+.section-wrapper,
+.night-section,
+.field-section,
+.library-section {
+       margin: 0; 
+}
 
-section {
-    width: 100vw;
+
+.start-section {
+    background-image: url("media/red.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+    background-position-x: left;
+    background-position-y: top;
+    z-index: 5;
+}
+
+.info {
+    padding: 20vh 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.info-wrapper:nth-child(1) {
+    width: 30vw;
+}
+
+.info-wrapper:nth-child(2) {
+    width: 20vw;
+    margin-left: 20px;
+}
+
+.caption-wrapper {
+    /* font-size: 11px; */
+    margin-top: 20px;
+}
+
+.caption-wrapper p {
     margin: 0;
 }
 
@@ -15,7 +54,7 @@ section {
     transition: background-color .5s ease;
 }
 
-@keyframes fade {
+/* @keyframes fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
@@ -23,14 +62,14 @@ section {
 @-webkit-keyframes fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
+} */
 
-.initial-fade {
+/* .initial-fade {
     -webkit-animation: fade 3s 1 ease;
             animation: fade 3s 1 ease;
-}
+} */
 
-.info {
+/* .info {
     width: 40vw;
     position: fixed;
     top: 50%;
@@ -79,7 +118,7 @@ section {
 #close-btn:hover {
     -webkit-filter: blur(2px);
     filter: blur(2px);
-}
+} */
 
 .shutter-section {
     position: relative;
@@ -108,6 +147,7 @@ section {
 .this-grid-column {
     width: 25%;
     padding: 0 10px;
+    z-index: 2;
 }
 
 .shutter-section p {
@@ -219,12 +259,12 @@ section {
     width: 250px;
     height: 250px;
     opacity: 0.95;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     background-image: url(media/la-notte/spotlight.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 0;
+    z-index: 1;
     cursor: crosshair;
 }
 

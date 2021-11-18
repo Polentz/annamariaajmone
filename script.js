@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
-    openElement("info-btn", "project", "open");
-    openElement("close-btn", "project", "open");
+    // openElement("info-btn", "project", "open");
+    // openElement("close-btn", "project", "open");
 
     soundElement("rec00", "rec00-audio");
     soundElement("rec01", "rec01-audio");
@@ -20,16 +20,14 @@ window.addEventListener("load", () => {
     videoElement("video05-btn", "video05");
     videoElement("video06-btn", "video06");
     videoElement("video07-btn", "video07");
-
-    // dragElements("drag-me");
 });
 
-function openElement(trigger, element, className) {
-    document.getElementById(trigger).addEventListener("click", (event) => {
-        document.getElementById(element).classList.toggle(className);
-        event.stopPropagation();
-    });
-}
+// function openElement(trigger, element, className) {
+//     document.getElementById(trigger).addEventListener("click", (event) => {
+//         document.getElementById(element).classList.toggle(className);
+//         event.stopPropagation();
+//     });
+// }
 
 function soundElement(button, element) {
     document.getElementById(button).addEventListener("click", () => {
@@ -101,7 +99,6 @@ const section = document.querySelector(".section-wrapper");
 const content = document.querySelector(".content");
 const menu = document.querySelector(".grid-menu");
 const btn = document.querySelector(".switch-btn");
-// const label = document.querySelector(".page-label");
 const cursor = document.getElementById("spotlight");
 
 document.addEventListener("scroll", () => {
@@ -109,7 +106,6 @@ document.addEventListener("scroll", () => {
         content.style.background = "#000";
         menu.style.display = "none";
         btn.style.opacity = "0";
-        // label.style.display = "none";
         cursor.style.display = "";
         // get cursor
         window.addEventListener("mousemove", (event) => {
@@ -122,10 +118,28 @@ document.addEventListener("scroll", () => {
         content.style.background = "";
         menu.style.display = "";
         btn.style.opacity = "1";
-        // label.style.display = "";
         cursor.style.display = "none";
     }
 });
+
+const menuSection = document.getElementById("la-notte");
+const menuPart01 = document.querySelector(".page-title");
+const menuPart02 = document.querySelector(".menu-links");
+const sidebar = document.querySelector(".sidebar");
+const label = document.querySelector(".page-label");
+document.addEventListener("scroll", () => {
+    if (inViewport(menuSection)) {
+        sidebar.style.display = "none";
+        label.style.display = "none";
+        menuPart01.style.display = "none";
+        menuPart02.style.display = "none";
+    } else {
+        sidebar.style.display = "";
+        label.style.display = "";
+        menuPart01.style.display = "";
+        menuPart02.style.display = "";
+    }
+})
 
 // get the href via js
 const anchorTags = document.querySelectorAll(".js-href");
