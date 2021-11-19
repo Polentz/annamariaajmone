@@ -100,6 +100,11 @@ const content = document.querySelector(".content");
 const menu = document.querySelector(".grid-menu");
 const btn = document.querySelector(".switch-btn");
 const cursor = document.getElementById("spotlight");
+const mainSection = document.getElementById("la-notte");
+const menuPart01 = document.querySelector(".page-title");
+const menuPart02 = document.querySelector(".menu-links");
+const sidebar = document.querySelector(".sidebar");
+const label = document.querySelector(".page-label");
 
 document.addEventListener("scroll", () => {
     if (inViewport(section)) {
@@ -122,22 +127,24 @@ document.addEventListener("scroll", () => {
     }
 });
 
-const menuSection = document.getElementById("la-notte");
-const menuPart01 = document.querySelector(".page-title");
-const menuPart02 = document.querySelector(".menu-links");
-const sidebar = document.querySelector(".sidebar");
-const label = document.querySelector(".page-label");
+// const mainSection = document.getElementById("la-notte");
+// const menuPart01 = document.querySelector(".page-title");
+// const menuPart02 = document.querySelector(".menu-links");
+// const sidebar = document.querySelector(".sidebar");
+// const label = document.querySelector(".page-label");
 document.addEventListener("scroll", () => {
-    if (inViewport(menuSection)) {
+    if (inViewport(mainSection)) {
         sidebar.style.display = "none";
         label.style.display = "none";
         menuPart01.style.display = "none";
         menuPart02.style.display = "none";
+        btn.style.display = "";
     } else {
         sidebar.style.display = "";
         label.style.display = "";
         menuPart01.style.display = "";
         menuPart02.style.display = "";
+        btn.style.display = "none";
     }
 })
 
