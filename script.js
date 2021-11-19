@@ -102,7 +102,8 @@ const btn = document.querySelector(".switch-btn");
 const cursor = document.getElementById("spotlight");
 const mainSection = document.getElementById("la-notte");
 const menuPart01 = document.querySelector(".page-title");
-const menuPart02 = document.querySelector(".menu-links");
+const menuPart02 = document.querySelector(".page-section");
+const menuPart03 = document.querySelector(".menu-links");
 const sidebar = document.querySelector(".sidebar");
 const label = document.querySelector(".page-label");
 
@@ -138,12 +139,14 @@ document.addEventListener("scroll", () => {
         label.style.display = "none";
         menuPart01.style.display = "none";
         menuPart02.style.display = "none";
+        menuPart03.style.display = "none";
         btn.style.display = "";
     } else {
         sidebar.style.display = "";
         label.style.display = "";
         menuPart01.style.display = "";
         menuPart02.style.display = "";
+        menuPart03.style.display = "";
         btn.style.display = "none";
     }
 })
@@ -156,7 +159,7 @@ anchorTags.forEach(link => {
 
         const href = link.getAttribute("href");
         document.querySelector(href).scrollIntoView({
-            behavior: "smooth"
+            // behavior: "smooth"
         });
     });
 });

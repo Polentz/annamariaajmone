@@ -1,3 +1,18 @@
+@-webkit-keyframes breathing {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes breathing {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.page-section {
+    -webkit-animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
+    animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
+}
+
 .start-section,
 #la-notte,
 .shutter-section,
