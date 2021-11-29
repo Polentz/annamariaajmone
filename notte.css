@@ -24,11 +24,11 @@
 }
 
 .start-section {
-    background-image: url("media/red.jpg");
+    background-image: url("media/la-notte/red.jpg");
     background-size: auto;
     background-repeat: repeat;
-    background-position-x: left;
-    background-position-y: top;
+    /* background-position-x: left; */
+    background-position-y: center;
     z-index: 5;
 }
 

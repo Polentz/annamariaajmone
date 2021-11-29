@@ -41,7 +41,8 @@ li::-moz-selection,
 img::-moz-selection,
 audio::-moz-selection,
 video::-moz-selection,
-div::-moz-selection {
+div::-moz-selection,
+em::-moz-selection {
     color: #ff0055;
 }
 
@@ -55,7 +56,8 @@ li::selection,
 img::selection,
 audio::selection,
 video::selection,
-div::selection {
+div::selection,
+em::selection {
     color: #ff0055;
 }
 
@@ -176,7 +178,7 @@ div::selection {
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
 }
-.area-2-4-2-3 {
+.area-4-6-2-3 {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2 / 4;
@@ -215,6 +217,14 @@ div::selection {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
+}
+.area-2-4-2-3 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
 }
 .area-2-4-3-4 {
     -ms-grid-column: 2;
