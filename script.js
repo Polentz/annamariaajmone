@@ -166,11 +166,11 @@ anchorTags.forEach(link => {
 
 const longTexts = document.querySelectorAll(".library-content-wrapper")
 longTexts.forEach(text => {
-    const opener = text.querySelector(".library-title")
+    const opener = text.querySelector(".library-title");
     opener.addEventListener("click", () => {
         [...longTexts].filter(q => q !== text).forEach(q => q.classList.remove("opened"));
         text.classList.toggle("opened");
-    })
+    });
 });
 
 
