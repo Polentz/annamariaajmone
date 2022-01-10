@@ -1,5 +1,12 @@
+/* .body-home {      
+    background-image: url("media/About-Hero.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 .body-home {      
-    background-image: url("media/red.jpg");
+    background-image: url("media/images/red.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,39 +39,9 @@ footer {
     mix-blend-mode: difference; 
 }
 
-/* @-webkit-keyframes breathing {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes breathing {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.breathing {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    -webkit-animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
-            animation: breathing 2s cubic-bezier(0.68, 0.04, 0.31, 1) infinite reverse;
-}
-
-.breathing a:hover {
-    text-decoration: none;
-}
-
-#this-show.color {
-    color: #ff0055bb;
-}
-
-#this-show {
-    transition: color .5s ease;
-} */
-
 #spotlight {
+    width: 250px;
+    height: 250px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -91,8 +68,8 @@ footer {
     }
 }
 
-/* @media screen and (max-width: 600px) {
-    .breathing {
-        display: none;
+@media screen and (max-width: 600px) {
+    .body-home {
+        background-repeat: repeat-y;
     }
-} */
+}

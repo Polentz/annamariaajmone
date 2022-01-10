@@ -3,7 +3,6 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    /* scroll-behavior: smooth; */
 }
 
 body {
@@ -444,13 +443,6 @@ nav {
     margin-top: 15vh;
 }
 
-/* .body-home {      
-    background-image: url("media/About-Hero.jpg");
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
 .max-height {
     height: 85vh;
     margin-bottom: 0;
@@ -462,7 +454,7 @@ nav {
     position: absolute;
     left: 0;
     top: 5vh;
-    background-image: url("media/Arcipelago-Colored.svg");
+    background-image: url("media/arcipelago/Arcipelago-Colored.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -554,16 +546,6 @@ footer p:last-child {
 
 section {
     position: relative;
-}
-
-/* .main,
-#description,
-.standard-section {
-    width: 100vw;
-    margin-bottom: 150px;
-} */
-
-section {
     width: 100vw;
     margin-bottom: 150px;
 }
@@ -600,7 +582,22 @@ section {
     width: 80%;
     height: 100%;
     margin-right: 20px;
-    background-image: url(media/Il-Segreto.svg);
+    background-image: url(media/il-segreto/Il-Segreto.svg);
+    background-position: 100% 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.visual-norama {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    width: 80%;
+    height: 100%;
+    margin-right: 20px;
+    background-image: url(media/no-rama/no-rama-visual.svg);
     background-position: 100% 0%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -615,24 +612,8 @@ section {
     width: 75%;
     height: 75%;
     margin-right: 20px;
-    background-image: url(media/Trigger-Shapes.svg);
+    background-image: url(media/trigger/Trigger-Shapes.svg);
     background-position: 100% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.visual-luglio {
-    position: absolute;
-    left: auto;
-    top: 50%;
-    left: calc(50% + 11vw);
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 90%;
-    height: 90%;
-    margin-right: 20px;
-    background-image: url(media/luglio/luglio04.svg);
-    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -694,7 +675,7 @@ section {
     z-index: 2;
     height: 30vh;
     margin-bottom: 20px;
-    background-image: url(media/Grilli-Gotici.svg);
+    background-image: url(media/arcipelago/Grilli-Gotici.svg);
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -731,13 +712,6 @@ section {
         -webkit-animation: move 3s 1 ease;
                 animation: move 3s 1 ease;
     }
-    /* .main,
-    #description,
-    .standard-section {
-        margin-bottom: 75px;
-        padding: 0 20px;
-    } */
-
     section {
         margin-bottom: 75px;
         padding: 0 20px;
@@ -930,7 +904,8 @@ section {
         right: 12px;
     }
     .visual-segreto,
-    .visual-notte {
+    .visual-notte,
+    .visual-norama {
         display: none;
     }
     .page-label {
@@ -945,9 +920,6 @@ section {
     .grid {
         display: block;
     }
-    .body-home {
-        background-repeat: repeat-y;
-    }
     .sticky,
     .sticky-2 {
         position: static;
@@ -955,12 +927,6 @@ section {
     .sticky-2 {
         margin-bottom: 0
     }
-    /* .main,
-    #description,
-    .standard-section {
-        margin-bottom: 0;
-        padding: 0 12px;
-    } */
     section {
         margin-bottom: 0;
         padding: 0 12px;
