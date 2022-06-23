@@ -5,7 +5,7 @@ anchorTags.forEach(link => {
 
         const href = link.getAttribute("href");
         document.querySelector(href).scrollIntoView({
-            // behavior: "smooth"
+            behavior: "smooth"
         });
     });
 });
