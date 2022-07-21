@@ -740,8 +740,8 @@ section {
     background-image: url("media/la-notte/ui-banner.svg");
     background-repeat: no-repeat;
     position: fixed;
-    bottom: 60px;
-    right: 60px;
+    bottom: 8%;
+    right: 8%;
     z-index: 5;
     -webkit-box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
     box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
