@@ -1,188 +1,79 @@
-window.addEventListener("load", () => {
-    // openElement("info-btn", "project", "open");
-    // openElement("close-btn", "project", "open");
-
-    soundElement("rec00", "rec00-audio");
-    soundElement("rec01", "rec01-audio");
-    soundElement("rec02", "rec02-audio");
-    soundElement("rec03", "rec03-audio");
-    soundElement("rec04", "rec04-audio");
-    soundElement("rec05", "rec05-audio");
-
-    mobileVersion("switch", "second-layer", "make-first", "first-layer", "hide");
-
-    typewriter("text-a", typewriterText, 75);
-
-    videoElement("video01-btn", "video01");
-    videoElement("video02-btn", "video02");
-    videoElement("video03-btn", "video03");
-    videoElement("video04-btn", "video04");
-    videoElement("video05-btn", "video05");
-    videoElement("video06-btn", "video06");
-    videoElement("video07-btn", "video07");
-});
-
-// function openElement(trigger, element, className) {
-//     document.getElementById(trigger).addEventListener("click", (event) => {
-//         document.getElementById(element).classList.toggle(className);
-//         event.stopPropagation();
-//     });
-// }
-
-function soundElement(button, element) {
-    document.getElementById(button).addEventListener("click", () => {
-        const audio = document.getElementById(element);
-        if (audio.paused)
-            audio.play();
-        else
-            audio.pause();
-    });
+// general // document height
+const documentHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty("--doc-height", `${window.innerHeight}px`)
 }
+window.addEventListener("resize", documentHeight)
+documentHeight();
 
-function mobileVersion(trigger, element, className, otherElement, otherClassName) {
-    document.getElementById(trigger).addEventListener("click", (event) => {
-        document.getElementById(element).classList.toggle(className);
-        document.getElementById(otherElement).classList.toggle(otherClassName);
-        event.stopPropagation();
-    });
-}
-
-// tyepewriter effect
-const typewriterText = "Roland Hammel tells us how wolves rather hunt sheep than deers and keep attacking until everything around is quiet again.                    ";
-const typewriter = (target, text, speed) => {
-    textArea = document.getElementById(target);
-
-    let pointer = -1;
-
-    setInterval(() => {
-        if (pointer <= text.length) {
-            textArea.innerHTML = text.substring(0, pointer);
-        } else {
-            pointer = -1;
-        }
-        pointer++;
-    }, speed);
-}
-
-function videoElement(button, element) {
-    document.getElementById(button).addEventListener("click", () => {
-        const video = document.getElementById(element);
-        video.muted = !video.muted;
-        video.classList.toggle("highlight");
-
-        const videoButton = document.getElementById(button);
-        if (videoButton.innerHTML == "UNMUTE") {
-            videoButton.innerHTML = "MUTE";
-        }
-        else {
-            videoButton.innerHTML = "UNMUTE";
-        }
-    });
-};
-
-// shutter effect
-const area = document.querySelector(".shutter-section");
-area.addEventListener("mousemove", (event) => {
-    let wW = document.body.clientWidth;
-    const x = event.pageX / wW * 100;
-    const xX = x.toFixed(2);
-    const element = document.querySelector(".second-layer");
-    element.style.width = xX + "%";
-});
-
-// detect viewport
-const inViewport = (e) => {
-    const elementRect = e.getBoundingClientRect();
-    return (elementRect.top < innerHeight && elementRect.bottom > 0);
-};
-const section = document.querySelector(".section-wrapper");
-const content = document.querySelector(".content");
-const menu = document.querySelector(".grid-menu");
-const btn = document.querySelector(".switch-btn");
-const cursor = document.getElementById("spotlight");
-const mainSection = document.getElementById("la-notte");
-const menuPart01 = document.querySelector(".page-title");
-const menuPart02 = document.querySelector(".page-section");
-const menuPart03 = document.querySelector(".menu-links");
-const sidebar = document.querySelector(".sidebar");
-const label = document.querySelector(".page-label");
-
-document.addEventListener("scroll", () => {
-    if (inViewport(section)) {
-        content.style.background = "#000";
-        menu.style.display = "none";
-        btn.style.opacity = "0";
-        cursor.style.display = "";
-        // get cursor
-        window.addEventListener("mousemove", (event) => {
-            let x = event.pageX;
-            let y = event.pageY;
-            cursor.style.left = x + "px";
-            cursor.style.top = y + "px";
-        });
-    } else {
-        content.style.background = "";
-        menu.style.display = "";
-        btn.style.opacity = "1";
-        cursor.style.display = "none";
-    }
-});
-
-// const mainSection = document.getElementById("la-notte");
-// const menuPart01 = document.querySelector(".page-title");
-// const menuPart02 = document.querySelector(".menu-links");
-// const sidebar = document.querySelector(".sidebar");
-// const label = document.querySelector(".page-label");
-document.addEventListener("scroll", () => {
-    if (inViewport(mainSection)) {
-        sidebar.style.display = "none";
-        label.style.display = "none";
-        menuPart01.style.display = "none";
-        menuPart02.style.display = "none";
-        menuPart03.style.display = "none";
-        btn.style.display = "";
-    } else {
-        sidebar.style.display = "";
-        label.style.display = "";
-        menuPart01.style.display = "";
-        menuPart02.style.display = "";
-        menuPart03.style.display = "";
-        btn.style.display = "none";
-    }
-})
-
-// get the href via js
+// general // href via js
 const anchorTags = document.querySelectorAll(".js-href");
-anchorTags.forEach(link => {
-    link.addEventListener("click", (event) => {
-        event.preventDefault();
+if (anchorTags) {
+    anchorTags.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
 
-        const href = link.getAttribute("href");
-        document.querySelector(href).scrollIntoView({
-            // behavior: "smooth"
+            const href = link.getAttribute("href");
+            document.querySelector(href).scrollIntoView({
+                behavior: "smooth"
+            });
         });
     });
-});
+}
 
-const longTexts = document.querySelectorAll(".library-content-wrapper")
-longTexts.forEach(text => {
-    const opener = text.querySelector(".library-title");
-    opener.addEventListener("click", () => {
-        [...longTexts].filter(q => q !== text).forEach(q => q.classList.remove("opened"));
-        text.classList.toggle("opened");
+// general // mobile menu
+const openMenu = document.getElementById("open-menu-mobile");
+const closeMenu = document.getElementById("close-menu-mobile");
+const mobileMenu = document.querySelector(".menu-overlay");
+
+if (mobileMenu) {
+    openMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("reveal");
+        openMenu.style.pointerEvents = "none";
+    })
+    closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.remove("reveal");
+        openMenu.style.pointerEvents = "all";
+    })
+}
+
+// pages // image cover
+const imageOnLoad = document.querySelector(".loading");
+if (imageOnLoad) {
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            imageOnLoad.classList.add("hidden");
+        }, 1000)
+    })
+}
+
+// homepage // calendar
+const calendar = document.getElementById("calendar");
+if (calendar) {
+    window.addEventListener("scroll", () => {
+        calendar.classList.add("fade");
     });
-});
+}
 
+// homepage // special cursor
+const spotCursor = document.getElementById("spotlight");
+if (spotCursor) {
+    document.addEventListener("mousemove", (event) => {
+        let x = event.pageX;
+        let y = event.pageY;
+        spotCursor.style.left = x + "px";
+        spotCursor.style.top = y + "px";
+    });
+}
 
+// special // la notte
+const spinBanner = document.querySelector(".banner");
+if (spinBanner) {
+    window.addEventListener("scroll", () => {
+        spinBanner.style.transform = "rotate(" + window.pageYOffset / 5 + "deg)";
+    })
 
-
-
-
-
-
-
-
-
-
-
-
+    spinBanner.addEventListener("mouseenter", () => {
+        spinBanner.style.transform = "rotate(" + 0 + "deg)";
+    })
+}

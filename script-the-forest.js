@@ -9,8 +9,6 @@ window.addEventListener("load", () => {
     soundElement("rec04", "rec04-audio");
     soundElement("rec05", "rec05-audio");
 
-    mobileVersion("switch", "second-layer", "make-first", "first-layer", "hide");
-
     typewriter("text-a", typewriterText, 75);
 
     videoElement("video01-btn", "video01");
@@ -20,16 +18,18 @@ window.addEventListener("load", () => {
     videoElement("video05-btn", "video05");
     videoElement("video06-btn", "video06");
     videoElement("video07-btn", "video07");
+
+    mobileVersion("switch", "second-layer", "make-first", "first-layer", "hide");
 });
 
-function openElement(trigger, element, className) {
+const openElement = (trigger, element, className) => {
     document.getElementById(trigger).addEventListener("click", (event) => {
         document.getElementById(element).classList.toggle(className);
         event.stopPropagation();
     });
 }
 
-function soundElement(button, element) {
+const soundElement = (button, element) => {
     document.getElementById(button).addEventListener("click", () => {
         const audio = document.getElementById(element);
         if (audio.paused)
@@ -39,21 +39,10 @@ function soundElement(button, element) {
     });
 }
 
-function mobileVersion(trigger, element, className, otherElement, otherClassName) {
-    document.getElementById(trigger).addEventListener("click", (event) => {
-        document.getElementById(element).classList.toggle(className);
-        document.getElementById(otherElement).classList.toggle(otherClassName);
-        event.stopPropagation();
-    });
-}
-
-// tyepewriter effect
 const typewriterText = "Roland Hammel tells us how wolves rather hunt sheep than deers and keep attacking until everything around is quiet again.                    ";
 const typewriter = (target, text, speed) => {
     textArea = document.getElementById(target);
-
     let pointer = -1;
-
     setInterval(() => {
         if (pointer <= text.length) {
             textArea.innerHTML = text.substring(0, pointer);
@@ -64,21 +53,29 @@ const typewriter = (target, text, speed) => {
     }, speed);
 }
 
-function videoElement(button, element) {
+const videoElement = (button, element) => {
     document.getElementById(button).addEventListener("click", () => {
         const video = document.getElementById(element);
         video.muted = !video.muted;
         video.classList.toggle("highlight");
 
         const videoButton = document.getElementById(button);
-        if (videoButton.innerHTML == "UNMUTE") {
+        if (videoButton.innerHTML == "UNMUTE / VOLUME UP") {
             videoButton.innerHTML = "MUTE";
         }
         else {
-            videoButton.innerHTML = "UNMUTE";
+            videoButton.innerHTML = "UNMUTE / VOLUME UP";
         }
     });
-};
+}
+
+const mobileVersion = (trigger, element, className, otherElement, otherClassName) => {
+    document.getElementById(trigger).addEventListener("click", (event) => {
+        document.getElementById(element).classList.toggle(className);
+        document.getElementById(otherElement).classList.toggle(otherClassName);
+        event.stopPropagation();
+    });
+}
 
 // shutter effect
 const area = document.querySelector(".shutter-section");
@@ -100,12 +97,6 @@ const content = document.querySelector(".content");
 const menu = document.querySelector(".grid-menu");
 const btn = document.querySelector(".switch-btn");
 const cursor = document.getElementById("spotlight");
-const mainSection = document.getElementById("la-notte");
-const menuPart01 = document.querySelector(".page-title");
-const menuPart02 = document.querySelector(".page-section");
-const menuPart03 = document.querySelector(".menu-links");
-const sidebar = document.querySelector(".sidebar");
-const label = document.querySelector(".page-label");
 
 document.addEventListener("scroll", () => {
     if (inViewport(section)) {
@@ -128,42 +119,18 @@ document.addEventListener("scroll", () => {
     }
 });
 
-// const mainSection = document.getElementById("la-notte");
-// const menuPart01 = document.querySelector(".page-title");
-// const menuPart02 = document.querySelector(".menu-links");
-// const sidebar = document.querySelector(".sidebar");
-// const label = document.querySelector(".page-label");
-document.addEventListener("scroll", () => {
-    if (inViewport(mainSection)) {
-        sidebar.style.display = "none";
-        label.style.display = "none";
-        menuPart01.style.display = "none";
-        menuPart02.style.display = "none";
-        menuPart03.style.display = "none";
-        btn.style.display = "";
-    } else {
-        sidebar.style.display = "";
-        label.style.display = "";
-        menuPart01.style.display = "";
-        menuPart02.style.display = "";
-        menuPart03.style.display = "";
-        btn.style.display = "none";
-    }
-})
-
 // get the href via js
 const anchorTags = document.querySelectorAll(".js-href");
 anchorTags.forEach(link => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
-
         const href = link.getAttribute("href");
         document.querySelector(href).scrollIntoView({
-            // behavior: "smooth"
         });
     });
 });
 
+// accordion (mobile only)
 const longTexts = document.querySelectorAll(".library-content-wrapper")
 longTexts.forEach(text => {
     const opener = text.querySelector(".library-title");

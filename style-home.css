@@ -5,7 +5,7 @@
     background-size: cover;
 } */
 
-.body-home {      
+.body-home {
     background-image: url("media/images/red.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@ footer {
 }
 
 .ui-comp {
-    mix-blend-mode: difference; 
+    mix-blend-mode: difference;
 }
 
 #spotlight {
@@ -46,11 +46,11 @@ footer {
     bottom: 0;
     right: 0;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     -webkit-transform-origin: center;
-        -ms-transform-origin: center;
-            transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
     opacity: 0.95;
     mix-blend-mode: exclusion;
     background-image: url(media/la-notte/spotlight.svg);
@@ -60,9 +60,11 @@ footer {
 }
 
 @media screen and (max-width: 915px) {
-    .lower label {
+
+    .menu-label p {
         color: #fff;
     }
+
     .hide-on-mobile {
         display: none;
     }
@@ -71,5 +73,9 @@ footer {
 @media screen and (max-width: 600px) {
     .body-home {
         background-repeat: repeat-y;
+    }
+
+    #spotlight {
+        display: none;
     }
 }

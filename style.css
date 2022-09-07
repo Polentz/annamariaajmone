@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --doc-height: 100%;
+}
+
 body {
     width: 100vw;
     height: auto;
@@ -65,7 +69,7 @@ em::selection {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: var(--doc-height);
     z-index: 8;
     opacity: 1;
     transition: all 2s ease-in;
@@ -344,7 +348,7 @@ nav {
 
 .sidebar {
     width: 15vw;
-    height: 100vh;
+    height: var(--doc-height);
     position: fixed;
     left: 30px;
     top: 15vh;
@@ -721,7 +725,7 @@ section {
 
 .conteiner-border {
     width: 100vw;
-    height: 100vh;
+    height: var(--doc-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -797,7 +801,6 @@ section {
     /* menu mobile style */
     .menu-mobile {
         display: block;
-        position: absolute;
         z-index: 5;
     }
 
@@ -805,6 +808,7 @@ section {
         position: fixed;
         top: 20px;
         left: 20px;
+        z-index: 5;
     }
 
     .menu-name a {
@@ -814,133 +818,76 @@ section {
         text-decoration: none;
     }
 
-    input {
-        display: none;
-    }
-
-    .lower {
+    .menu-label {
         position: fixed;
         top: 20px;
         right: 20px;
+        z-index: 5;
     }
 
-    .lower label {
+    .menu-label p {
         font-family: "Manrope", sans-serif;
         font-weight: 800;
         font-size: 12px;
-        line-height: 1.8;
-        color: #000;
         letter-spacing: 0.8px;
         text-transform: uppercase;
-    }
-
-    .lower label:hover {
         cursor: pointer;
     }
 
-    .overlay {
+    .menu-overlay {
+        opacity: 0;
+        pointer-events: none;
+        background-color: #000;
+        padding: 15vh 12px 12px 12px;
         position: fixed;
-        width: 100%;
-        height: 100%;
         top: 0;
-        left: 0;
-        background: #000;
-        z-index: 999;
+        width: 100vw;
+        height: var(--doc-height);
+        z-index: 8;
+        transition: all .8s ease;
     }
 
-    .overlay label {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        cursor: pointer;
-        background: url("media/ui-cross-close.svg");
+    .menu-overlay.reveal {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0px);
     }
 
-    .overlay div {
-        position: relative;
-        top: 50%;
-        height: 60%;
-        font-size: 54px;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        margin: 20px;
+    .nav-mobile {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1.5s ease;
     }
 
-    .overlay ul {
+    .menu-overlay.reveal .nav-mobile {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .nav-mobile li {
         list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        display: inline-block;
-        height: 100%;
-        position: relative;
-    }
-
-    .overlay ul li {
-        display: block;
-    }
-
-    .overlay ul li a {
-        display: block;
-        text-decoration: none;
-        -webkit-transition: color 0.2s;
-        -o-transition: color 0.2s;
-        transition: color 0.2s;
         font-family: "Manrope", sans-serif;
         font-weight: 800;
         font-size: 12px;
-        line-height: 1.8;
+        line-height: 2;
         color: #fff;
         letter-spacing: 0.8px;
         text-transform: uppercase;
+        cursor: pointer;
+        transform: translateY(30px);
     }
 
-    .overlay ul li a:hover,
-    .overlay ul li a:focus {
-        text-decoration: line-through;
-        -webkit-text-decoration-color: #fff;
-        text-decoration-color: #fff;
+    .nav-mobile li a {
+        text-decoration: none;
+        color: #fff;
     }
 
-    .lower~.overlay-hugeinc {
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-        -o-transition: opacity 0.5s, visibility 0s 0.5s;
-        transition: opacity 0.5s, visibility 0s 0.5s;
-    }
-
-    #op:checked~.overlay-hugeinc {
-        opacity: 1;
-        visibility: visible;
-        -webkit-transition: opacity 0.5s;
-        -o-transition: opacity 0.5s;
-        transition: opacity 0.5s;
-    }
-
-    .overlay-hugeinc div ul {
-        opacity: 0.4;
-        -webkit-transform: translateY(-25%) rotateX(35deg);
-        transform: translateY(-25%) rotateX(35deg);
-        -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
-        transition: opacity 0.5s, -webkit-transform 0.5s;
-        -o-transition: transform 0.5s, opacity 0.5s;
-        transition: transform 0.5s, opacity 0.5s;
-        transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
-    }
-
-    #op:checked~.overlay-hugeinc div ul {
-        opacity: 1;
-        -webkit-transform: rotateX(0deg);
-        transform: rotateX(0deg);
-    }
-
-    #op:not(:checked)~.overlay-hugeinc div ul {
-        -webkit-transform: translateY(25%) rotateX(-35deg);
-        transform: translateY(25%) rotateX(-35deg);
+    .nav-mobile-btn {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        right: 12px;
     }
 
     /* end menu mobile style */
@@ -1005,8 +952,16 @@ section {
         left: 12px;
     }
 
-    .lower {
+    .menu-label {
         right: 12px;
+    }
+
+    .main {
+        margin-top: 0;
+    }
+
+    .grid {
+        margin: 15vh 0;
     }
 
     .visual-segreto,
@@ -1073,7 +1028,7 @@ section {
 
     .text-box {
         padding: 10px;
-        z-index: 1;
+        z-index: 7;
     }
 
     .wrapper-column {

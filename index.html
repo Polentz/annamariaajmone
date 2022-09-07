@@ -37,37 +37,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="style-home.css">
 </head>
 
 <body class="body-home">
     <div class="menu-mobile">
         <div class="menu-name">
-            <a href="index.html">Annamaria Ajmone</a>
+            <a href="index.html">AA</a>
         </div>
-        <input type="checkbox" id="op"></input>
-        <div class="link lower">
-            <label for="op">Menu</label>
+        <div class="menu-label">
+            <p id="open-menu-mobile">Menu</p>
         </div>
-        <div class="overlay overlay-hugeinc">
-            <label for="op"></label>
-            <div class="nav-mobile">
-                <ul>
-                    <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
-                    <li><a href="luglio.html">Luglio</a></li>
-                    <li><a href="il-segreto.html">Il Segreto</a></li>
-                    <li><a href="no-rama.html">No Rama</a></li>
-                    <li><a href="to-be-banned-from-rome.html">To Be Banned From Rome</a></li>
-                    <li><a href="mash.html">Mash</a></li>
-                    <li><a href="trigger.html">Trigger</a></li>
-                    <li><a href="tiny.html">Tiny</a></li>
-                    <li><a href="arcipelago.html" style="margin-top: 20px;">Arcipelago</a></li>
-                    <li><a href="nobody.html" style="margin-top: 20px;">Nobody's Indiscipline</a></li>
-                    <li><a href="index.html" style="margin-top: 20px;">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="mailto:annamaria.org@gmail.com">Contatti</a></li>
-                    <li><a href="en/index.html" style="margin-top: 20px;">En</a></li>
-                </ul>
+        <div class="menu-overlay">
+            <ul class="nav-mobile">
+                <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
+                <li><a href="luglio.html">Luglio</a></li>
+                <li><a href="il-segreto.html">Il Segreto</a></li>
+                <li><a href="no-rama.html">No Rama</a></li>
+                <li><a href="to-be-banned-from-rome.html">To Be Banned From Rome</a></li>
+                <li><a href="mash.html">Mash</a></li>
+                <li><a href="trigger.html">Trigger</a></li>
+                <li><a href="tiny.html">Tiny</a></li>
+                <li style="margin-top: 12px;"><a href="arcipelago.html">Arcipelago</a></li>
+                <li style="margin-top: 12px;"><a href="nobody.html">Nobody's Indiscipline</a></li>
+                <li style="margin-top: 12px;"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mailto:annamaria.org@gmail.com">Contatti</a></li>
+                <li style="margin-top: 12px;"><a href="en/index.html">En</a></li>
+            </ul>
+            <div id="close-menu-mobile" class="nav-mobile-btn">
+                <img src="media/ui-cross-close.svg">
             </div>
         </div>
     </div>
@@ -178,11 +177,50 @@
                 <div class="cal-column">
                     <p>PROSSIME DATE</p>
                     <div class="cal-block">
-                        <p>30 luglio</p>
-                        <p>Il Segreto</p>
-                        <a href="http://www.crisalidefestival.eu/" target="_blank">Crisalide 2022</a>
-                        <p>Area Sismica</p>
-                        <p>Forlì</p>
+                        <p>12-13 settembre</p>
+                        <p>La foresta e gli incontri</p>
+                        <p>Laboratorio con Annamaria Ajmone e Stella Succi</p>
+                        <a href="https://triennale.org/eventi/foresta-incontri" target="_blank">Triennale Milano</a>
+                    </div>
+                    <div class="cal-block">
+                        <p>15 settembre</p>
+                        <a href="https://triennale.org/eventi/foresta-incontri" target="_blank">Festival Cantieri
+                            Culturali Isolotto</a>
+                        <p>Workshop per danzatrici e danzatori</p>
+                        <p>Firenze</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>21 settembre</p>
+                        <a href="il-segreto.html" target="_blank">Il Segreto</a>
+                        <p>TBA</p>
+                        <p>Pavia</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>24 settembre</p>
+                        <a href="no-rama.html" target="_blank">NO RAMA</a>
+                        <p>TBA</p>
+                        <p>Domus Aurea</p>
+                        <p>Roma</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>15 ottobre</p>
+                        <p>Senza titolo</p>
+                        <a href="https://artverona.it/" target="_blank">Art Verona</a>
+                    </div>
+                    <div class="cal-block">
+                        <p>22-23 ottobre</p>
+                        <p>La notte è il mio giorno preferito</p>
+                        <a href="https://artverona.it/" target="_blank">Cango</a>
+                        <p>Firenze</p>
+                    </div>
+                </div>
+                <div class="cal-column">
+                    <p>DATE PASSATE</p>
+                    <div class="cal-block">
+                        <p>19-20 agosto</p>
+                        <p>La notte è il mio giorno preferito</p>
+                        <a href="https://far-nyon.ch/" target="_blank">far° Festival</a>
+                        <p>Nyon</p>
                     </div>
                     <div class="cal-block">
                         <p>8 agosto</p>
@@ -192,14 +230,18 @@
                         <p>Cesenatico</p>
                     </div>
                     <div class="cal-block">
-                        <p>19-20 agosto</p>
-                        <p>La notte è il mio giorno preferito</p>
-                        <a href="https://far-nyon.ch/" target="_blank">far° Festival</a>
-                        <p>Nyon</p>
+                        <p>5 agosto</p>
+                        <a href="https://www.fracfestival.com/" target="_blank">Frac Festival</a>
+                        <p>Torre dei Cavalieri</p>
+                        <p>Gizzeria (CZ)</p>
                     </div>
-                </div>
-                <div class="cal-column">
-                    <p>DATE PASSATE</p>
+                    <div class="cal-block">
+                        <p>30 luglio</p>
+                        <p>Il Segreto</p>
+                        <a href="http://www.crisalidefestival.eu/" target="_blank">Crisalide 2022</a>
+                        <p>Area Sismica</p>
+                        <p>Forlì</p>
+                    </div>
                     <div class="cal-block">
                         <p>22 luglio</p>
                         <a href="arcipelago.html" target="_blank">Slide in B con Caned Icoda</a>
@@ -208,36 +250,22 @@
                         <p>Malfa, Isola di Salina</p>
                     </div>
                     <div class="cal-block">
-                        <p>8-9-10 luglio</p>
-                        <p>La notte è il mio giorno preferito</p>
-                        <a href="https://www.santarcangelofestival.com/show/la-notte-e-il-mio-giorno-preferito/"
-                            target="_blank">Santarcangelo Festival</a>
-                        <p>Santarcangelo di Romagna</p>
-                    </div>
-                    <div class="cal-block">
-                        <p>9 giugno</p>
-                        <p>La notte è il mio giorno preferito</p>
-                        <a href="https://palaisdetokyo.com/" target="_blank">Palais de Tokyo</a>
-                        <p>Parigi</p>
-                    </div>
-                    <div class="cal-block">
                         <a href="media/download/AA-Calendar.pdf" target="_blank">(calendario 2016-2022)</a>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
     <footer>
         <!-- <p>Foto © Luca Del Pia</p> -->
         <p>© 2022 Annamaria Ajmone</p>
     </footer>
+
     <div id="spotlight"></div>
     <div class="line"></div>
 
-    <script type="text/javascript" src="home.js"></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

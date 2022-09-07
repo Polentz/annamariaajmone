@@ -38,10 +38,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="notte-nyon.css">
+    <link rel="stylesheet" href="style-the-forest.css">
 </head>
 
-<body id="la-notte">
+<body id="top" onload="history.scrollRestoration = 'manual'">
     <div class="info" id="project">
         <div class="info-wrapper">
             <div class="text-box scroll-on-mobile">
@@ -71,17 +71,25 @@
         </div>
     </div>
 
+    <div class="menu-mobile">
+        <div class="menu-name">
+            <a href="index.html">AA</a>
+        </div>
+        <div class="menu-label">
+            <p id="info-btn">About this page</p>
+        </div>
+    </div>
+
     <nav class="grid-menu">
         <div class="menu-name area-1-2">
             <a href="index.html" class="link menu-items">Annamaria Ajmone</a>
         </div>
         <div class="menu-links area-4-6">
-            <a href="#project" class="link menu-items js-href" id="info-btn">About this page</a>
+            <a class="link menu-items js-href" id="info-btn">About this page</a>
         </div>
     </nav>
 
-    <div class="content initial-fade" id="content">
-
+    <main class="content initial-fade" id="content">
         <section class="shutter-section">
             <div class="switch-btn" id="switch"></div>
             <div class="first-layer" id="first-layer">
@@ -336,11 +344,9 @@
         </section>
 
         <section class="field-section">
-
             <div class="section-title-fixed">
                 <h1>From the field</h1>
             </div>
-
             <div class="field-content">
                 <!-- casa -->
                 <div class="this-grid">
@@ -382,7 +388,7 @@
                                 <source src="media/la-notte/IMG_2696.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <button class="video-btn" id="video01-btn">UNMUTE</button>
+                            <button class="video-btn" id="video01-btn">UNMUTE / VOLUME UP</button>
                         </div>
                     </div>
                     <div class="this-grid-column full-on-mobile">
@@ -391,7 +397,7 @@
                                 <source src="media/la-notte/IMG_2740.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <button class="video-btn" id="video02-btn">UNMUTE</button>
+                            <button class="video-btn" id="video02-btn">UNMUTE / VOLUME UP</button>
                         </div>
                     </div>
                     <div class="this-grid-column">
@@ -432,7 +438,7 @@
                                 <source src="media/la-notte/IMG_2724.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <button class="video-btn" id="video07-btn">UNMUTE</button>
+                            <button class="video-btn" id="video07-btn">UNMUTE / VOLUME UP</button>
                         </div>
                     </div>
                     <div class="this-grid-column">
@@ -484,7 +490,7 @@
                                 <source src="media/la-notte/IMG_2761.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <button class="video-btn" id="video03-btn">UNMUTE</button>
+                            <button class="video-btn" id="video03-btn">UNMUTE / VOLUME UP</button>
                         </div>
                     </div>
                     <div class="this-grid-column full-on-mobile">
@@ -493,7 +499,7 @@
                                 <source src="media/la-notte/IMG_2786.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <button class="video-btn" id="video04-btn">UNMUTE</button>
+                            <button class="video-btn" id="video04-btn">UNMUTE / VOLUME UP</button>
                         </div>
                     </div>
                     <div class="this-grid-column full-on-mobile">
@@ -546,7 +552,7 @@
                                 <source src="media/la-notte/IMG_2749.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <button class="video-btn" id="video05-btn">UNMUTE</button>
+                            <button class="video-btn" id="video05-btn">UNMUTE / VOLUME UP</button>
                         </div>
                     </div>
                     <div class="this-grid-column full-on-mobile">
@@ -555,7 +561,7 @@
                                 <source src="media/la-notte/IMG_2746.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <button class="video-btn" id="video06-btn">UNMUTE</button>
+                            <button class="video-btn" id="video06-btn">UNMUTE / VOLUME UP</button>
                         </div>
                     </div>
                     <div class="this-grid-column"></div>
@@ -567,7 +573,7 @@
             <div class="library-container">
                 <div class="section-title">
                     <h1>Reading room</h1>
-                    <a href="#la-notte" class="js-href">
+                    <a href="#top" class="js-href">
                         <div class="to-top-btn"></div>
                     </a>
                 </div>
@@ -999,13 +1005,12 @@
                     </div>
                 </div>
             </div>
-
         </section>
-    </div>
+    </main>
+
     <div class="line"></div>
 
-    <script type="text/javascript" src="script-nyon.js"></script>
-
+    <script src="script-the-forest.js"></script>
 </body>
 
 </html>
