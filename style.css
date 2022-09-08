@@ -764,6 +764,11 @@ section {
 }
 
 .banner-text a {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
     color: #ff0055;
     text-decoration-color: #ff0055;
 }
@@ -1049,5 +1054,11 @@ section {
     .sub-text,
     .main-text {
         margin: 20px 0;
+    }
+
+    .banner {
+        width: 90px;
+        height: 90px;
+        mix-blend-mode: normal;
     }
 }
