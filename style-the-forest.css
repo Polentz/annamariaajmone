@@ -106,6 +106,19 @@
     transition: all .5s ease;
 }
 
+.info-wrapper {
+    display: none;
+}
+
+.info.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.info.open .info-wrapper {
+    display: block;
+}
+
 .caption-wrapper {
     font-size: 11px;
     margin-top: 30px;
@@ -113,11 +126,6 @@
 
 .caption-wrapper p {
     margin: 0;
-}
-
-.info.open {
-    opacity: 1;
-    pointer-events: all;
 }
 
 #close-btn {

@@ -70,6 +70,7 @@ em::selection {
     left: 0;
     width: 100vw;
     height: var(--doc-height);
+    background-color: #000;
     z-index: 8;
     opacity: 1;
     transition: all 2s ease-in;
@@ -756,21 +757,12 @@ section {
 }
 
 .banner-text {
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.banner-text a {
-    font-family: "Manrope", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.8;
-    letter-spacing: 0.8px;
-    color: #ff0055;
-    text-decoration-color: #ff0055;
 }
 
 .banner:hover {
@@ -866,6 +858,10 @@ section {
         transform: translateY(0px);
     }
 
+    .menu-overlay.reveal .nav-mobile li a {
+        display: block;
+    }
+
     .nav-mobile li {
         list-style: none;
     }
@@ -879,9 +875,8 @@ section {
         letter-spacing: 0.8px;
         text-transform: uppercase;
         text-decoration: none;
-        display: block;
         padding: 4px 0;
-        pointer-events: all;
+        display: none;
     }
 
     .nav-mobile-btn {
