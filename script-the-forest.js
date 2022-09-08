@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
     openElement("info-btn", "project", "open");
+    openElement("info-btn-mobile", "project", "open")
     openElement("close-btn", "project", "open");
 
     soundElement("rec00", "rec00-audio");

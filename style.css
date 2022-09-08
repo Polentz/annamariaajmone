@@ -769,11 +769,9 @@ section {
 }
 
 .banner:hover {
-    /* background-color: #fff; */
     mix-blend-mode: difference;
 }
 
-/* first breackpoint ---> tablet */
 @media screen and (max-width: 915px) {
     .page-label {
         right: 10px;
@@ -798,7 +796,6 @@ section {
         padding: 0 20px;
     }
 
-    /* menu mobile style */
     .menu-mobile {
         display: block;
         z-index: 5;
@@ -866,20 +863,20 @@ section {
 
     .nav-mobile li {
         list-style: none;
-        font-family: "Manrope", sans-serif;
-        font-weight: 800;
-        font-size: 12px;
-        line-height: 2;
-        color: #fff;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        cursor: pointer;
-        transform: translateY(30px);
     }
 
     .nav-mobile li a {
-        text-decoration: none;
+        font-family: "Manrope", sans-serif;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 1.2;
         color: #fff;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        padding: 4px 0;
+        pointer-events: all;
     }
 
     .nav-mobile-btn {
@@ -889,8 +886,6 @@ section {
         top: 20px;
         right: 12px;
     }
-
-    /* end menu mobile style */
 
     .grid-menu,
     .sidebar {
@@ -942,7 +937,6 @@ section {
     }
 }
 
-/* last breackpoint ---> mobile */
 @media screen and (max-width: 600px) {
     .hide-on-mobile {
         display: none;
