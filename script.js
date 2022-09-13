@@ -63,12 +63,7 @@ if (spotCursor) {
         let y = event.pageY;
         spotCursor.style.left = x + "px";
         spotCursor.style.top = y + "px";
-        spotCursor.style.display = "block";
     });
-
-    document.addEventListener("mouseout", () => {
-        spotCursor.style.display = "none";
-    })
 }
 
 // special // la notte banner
