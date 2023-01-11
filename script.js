@@ -1,7 +1,6 @@
 // create menus
 const createSidebar = () => {
     return `<ul>
-<li>Produzioni</li>
 <li><a href="la-notte.html" class="link sidebar-items" id="this-show">La notte è il mio<br>giorno preferito</a></li>
 <li><a href="senza-titolo.html" class="link sidebar-items">Senza titolo</a></li>
 <li><a href="luglio.html" class="link sidebar-items">Luglio</a></li>
@@ -13,7 +12,6 @@ const createSidebar = () => {
 <li><a href="tiny.html" class="link sidebar-items">Tiny</a></li>
 </ul>
 <ul>
-<li>Progetti</li>
 <li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
 <li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
 </ul>`;
