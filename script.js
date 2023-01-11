@@ -13,6 +13,7 @@ const createSidebar = () => {
 <li><a href="tiny.html" class="link sidebar-items">Tiny</a></li>
 </ul>
 <ul>
+<li>Progetti</li>
 <li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
 <li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
 </ul>`;
