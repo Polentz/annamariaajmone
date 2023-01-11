@@ -943,6 +943,14 @@ section {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    .grid-arc {
+        display: block;
+    }
+
+    .project-gallery {
+        padding-bottom: 20px;
+    }
+
     .loading {
         display: none;
     }
@@ -1044,8 +1052,8 @@ section {
     }
 
     .nav-mobile-btn {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         position: absolute;
         top: 20px;
         right: 12px;
@@ -1110,13 +1118,14 @@ section {
     }
 
     .project-close {
-        left: 10px;
+        left: 20px;
         top: 20px;
     }
 
     .project-text {
         position: static;
-        overflow: scroll;
+        /* overflow: scroll; */
+        margin-top: 60px;
     }
 }
 
@@ -1244,5 +1253,17 @@ section {
         overflow-y: scroll;
         margin-bottom: 0;
         padding-top: 50px;
+    }
+
+    .project-gallery {
+        padding-bottom: 12px;
+    }
+
+    .project-close {
+        left: 12px;
+    }
+
+    .page-info {
+        width: calc(100vw - 24px);
     }
 }
