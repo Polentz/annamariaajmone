@@ -681,6 +681,7 @@
         height: 85vh;
         overflow-y: scroll;
         margin-bottom: 0;
+        padding-top: 50px;
     }
 
     .info-wrapper:nth-child(1) {
