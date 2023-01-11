@@ -676,6 +676,10 @@ section {
     z-index: 5;
 }
 
+.text-box:last-child {
+    margin-bottom: 0;
+}
+
 .text-box p {
     margin-bottom: 20px;
 }
@@ -693,6 +697,11 @@ section {
     position: sticky;
     top: 10px;
 }
+
+.sticky img {
+    margin-bottom: -10px;
+}
+
 
 .sticky-2 {
     -ms-flex-item-align: start;
@@ -822,7 +831,7 @@ section {
 }
 
 
-.page-title {
+.page-info-btn {
     text-transform: uppercase;
     text-decoration: underline;
     font-weight: 800;

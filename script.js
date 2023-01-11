@@ -78,13 +78,13 @@ if (spinBanner) {
 }
 
 // special // arcipelago
-const projectLinks = document.querySelectorAll(".grid-arc .link");
 const projects = document.querySelectorAll(".project");
-const body = document.querySelector("body");
-const pageBtn = document.querySelector(".page-title");
-const pageInfo = document.querySelector(".page-info");
-const infoClose = document.querySelector(".info-close");
 if (projects) {
+    const projectLinks = document.querySelectorAll(".grid-arc .link");
+    const body = document.querySelector("body");
+    const pageBtn = document.querySelector(".page-info-btn");
+    const pageInfo = document.querySelector(".page-info");
+    const infoClose = document.querySelector(".info-close");
     projectLinks.forEach(link => {
         link.addEventListener("click", (event) => {
             event.preventDefault();
