@@ -475,6 +475,26 @@ nav {
     }
 }
 
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .initial {
     -webkit-animation: move 3s 1 ease;
     animation: move 3s 1 ease;
@@ -506,6 +526,8 @@ nav {
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 0;
+    -webkit-animation: move 5s 1 ease;
+    animation: move 5s 1 ease;
 }
 
 #description {
@@ -676,10 +698,6 @@ section {
     z-index: 5;
 }
 
-.text-box:last-child {
-    margin-bottom: 0;
-}
-
 .text-box p {
     margin-bottom: 20px;
 }
@@ -840,6 +858,8 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
+    -webkit-animation: fadeIn 3s 1 ease;
+    animation: fadeIn 3s 1 ease;
 }
 
 .grid-arc div:nth-of-type(1) {
@@ -899,11 +919,12 @@ section {
     position: -webkit-sticky;
     position: sticky;
     top: 20px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .project-gallery {
-    overflow: scroll;
+    overflow-y: scroll;
+    padding-bottom: 20px;
 }
 
 .project-close {
@@ -945,10 +966,6 @@ section {
 
     .grid-arc {
         display: block;
-    }
-
-    .project-gallery {
-        padding-bottom: 20px;
     }
 
     .loading {
@@ -1124,7 +1141,6 @@ section {
 
     .project-text {
         position: static;
-        /* overflow: scroll; */
         margin-top: 60px;
     }
 }

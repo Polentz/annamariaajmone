@@ -1,3 +1,47 @@
+// create menus
+const createSidebar = () => {
+    return `<ul>
+<li>Produzioni</li>
+<li><a href="la-notte.html" class="link sidebar-items" id="this-show">La notte è il mio<br>giorno preferito</a></li>
+<li><a href="senza-titolo.html" class="link sidebar-items">Senza titolo</a></li>
+<li><a href="luglio.html" class="link sidebar-items">Luglio</a></li>
+<li><a href="il-segreto.html" class="link sidebar-items">Il Segreto</a></li>
+<li><a href="no-rama.html" class="link sidebar-items">No Rama</a></li>
+<li><a href="to-be-banned-from-rome.html" class="link sidebar-items">To Be Banned From Rome</a></li>
+<li><a href="mash.html" class="link sidebar-items">Mash</a></li>
+<li><a href="trigger.html" class="link sidebar-items">Trigger</a></li>
+<li><a href="tiny.html" class="link sidebar-items">Tiny</a></li>
+</ul>
+<ul>
+<li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
+<li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
+</ul>`;
+}
+const sidebar = document.querySelector(".sidebar");
+sidebar.insertAdjacentHTML('beforeend', createSidebar());
+
+const createMobileMenu = () => {
+    return `<ul class="nav-mobile">
+<li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
+<li><a href="senza-titolo.html">Senza titolo</a></li>
+<li><a href="luglio.html">Luglio</a></li>
+<li><a href="il-segreto.html">Il Segreto</a></li>
+<li><a href="no-rama.html">No Rama</a></li>
+<li><a href="to-be-banned-from-rome.html">To Be Banned From Rome</a></li>
+<li><a href="mash.html">Mash</a></li>
+<li><a href="trigger.html">Trigger</a></li>
+<li><a href="tiny.html">Tiny</a></li>
+<li style="margin-top: 12px;"><a href="arcipelago.html">Arcipelago</a></li>
+<li><a href="nobody.html">Nobody's Indiscipline</a></li>
+<li style="margin-top: 12px;"><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="mailto:annamaria.org@gmail.com">Contatti</a></li>
+<li style="margin-top: 12px;"><a href="en/index.html">En</a></li>
+</ul>`;
+}
+const mobileMenu = document.querySelector(".menu-overlay");
+mobileMenu.insertAdjacentHTML('beforeend', createMobileMenu());
+
 // general // document height
 const documentHeight = () => {
     const doc = document.documentElement;
@@ -23,7 +67,6 @@ if (anchorTags) {
 // general // mobile menu
 const openMenu = document.getElementById("open-menu-mobile");
 const closeMenu = document.getElementById("close-menu-mobile");
-const mobileMenu = document.querySelector(".menu-overlay");
 
 if (mobileMenu) {
     openMenu.addEventListener("click", () => {
@@ -112,12 +155,11 @@ if (projects) {
                 behavior: "smooth"
             });
         });
-    });
-
-    pageBtn.addEventListener("click", () => {
-        pageInfo.classList.add("open");
-    });
-    infoClose.addEventListener("click", () => {
-        pageInfo.classList.remove("open");
+        pageBtn.addEventListener("click", () => {
+            pageInfo.classList.add("open");
+        });
+        infoClose.addEventListener("click", () => {
+            pageInfo.classList.remove("open");
+        });
     });
 }
