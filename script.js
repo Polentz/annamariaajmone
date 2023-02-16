@@ -1,45 +1,78 @@
-// create menus
+// create menu
+const currentPathname = location.pathname.split("/").slice(-1);
+let sidebarText
+let langHref
+let langText
 const createSidebar = () => {
-    return `<ul>
-<li><a href="la-notte.html" class="link sidebar-items" id="this-show">La notte è il mio<br>giorno preferito</a></li>
-<li><a href="senza-titolo.html" class="link sidebar-items">Senza titolo</a></li>
-<li><a href="luglio.html" class="link sidebar-items">Luglio</a></li>
-<li><a href="il-segreto.html" class="link sidebar-items">Il Segreto</a></li>
-<li><a href="no-rama.html" class="link sidebar-items">No Rama</a></li>
-<li><a href="to-be-banned-from-rome.html" class="link sidebar-items">To Be Banned From Rome</a></li>
-<li><a href="mash.html" class="link sidebar-items">Mash</a></li>
-<li><a href="trigger.html" class="link sidebar-items">Trigger</a></li>
-<li><a href="tiny.html" class="link sidebar-items">Tiny</a></li>
-</ul>
-<ul>
-<li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
-<li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
-</ul>`;
+    return `
+    <ul>
+        <li>${sidebarText}</li>
+        <li><a href="la-notte.html" class="link sidebar-items">La notte è il mio<br>giorno preferito</a></li>
+        <li><a href="senza-titolo.html" class="link sidebar-items">Senza titolo</a></li>
+        <li><a href="luglio.html" class="link sidebar-items">Luglio</a></li>
+        <li><a href="il-segreto.html" class="link sidebar-items">Il Segreto</a></li>
+        <li><a href="no-rama.html" class="link sidebar-items">No Rama</a></li>
+        <li><a href="to-be-banned-from-rome.html" class="link sidebar-items">To Be Banned From Rome</a></li>
+        <li><a href="mash.html" class="link sidebar-items">Mash</a></li>
+        <li><a href="trigger.html" class="link sidebar-items">Trigger</a></li>
+        <li><a href="tiny.html" class="link sidebar-items">Tiny</a></li>
+    </ul>
+    <ul>
+        <li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
+        <li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
+    </ul>`;
 }
-const sidebar = document.querySelector(".sidebar");
-sidebar.insertAdjacentHTML('beforeend', createSidebar());
-
 const createMobileMenu = () => {
-    return `<ul class="nav-mobile">
-<li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
-<li><a href="senza-titolo.html">Senza titolo</a></li>
-<li><a href="luglio.html">Luglio</a></li>
-<li><a href="il-segreto.html">Il Segreto</a></li>
-<li><a href="no-rama.html">No Rama</a></li>
-<li><a href="to-be-banned-from-rome.html">To Be Banned From Rome</a></li>
-<li><a href="mash.html">Mash</a></li>
-<li><a href="trigger.html">Trigger</a></li>
-<li><a href="tiny.html">Tiny</a></li>
-<li style="margin-top: 12px;"><a href="arcipelago.html">Arcipelago</a></li>
-<li><a href="nobody.html">Nobody's Indiscipline</a></li>
-<li style="margin-top: 12px;"><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="mailto:annamaria.org@gmail.com">Contatti</a></li>
-<li style="margin-top: 12px;"><a href="en/index.html">En</a></li>
-</ul>`;
+    return `
+    <div class="nav-mobile">
+        <ul>
+            <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
+            <li><a href="senza-titolo.html">Senza titolo</a></li>
+            <li><a href="luglio.html">Luglio</a></li>
+            <li><a href="il-segreto.html">Il Segreto</a></li>
+            <li><a href="no-rama.html">No Rama</a></li>
+            <li><a href="to-be-banned-from-rome.html">To Be Banned From Rome</a></li>
+            <li><a href="mash.html">Mash</a></li>
+            <li><a href="trigger.html">Trigger</a></li>
+            <li><a href="tiny.html">Tiny</a></li>
+        </ul>
+        <ul>
+            <li><a href="arcipelago.html">Arcipelago</a></li>
+            <li><a href="nobody.html">Nobody's Indiscipline</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mailto:annamaria.org@gmail.com">Contatti</a></li>
+        </ul>
+        <ul>
+            <li><a href="${langHref}${currentPathname}">${langText}</a></li>
+        </ul>
+    </div>`;
 }
 const mobileMenu = document.querySelector(".menu-overlay");
-mobileMenu.insertAdjacentHTML('beforeend', createMobileMenu());
+const sidebar = document.querySelector(".sidebar");
+const getLang = document.documentElement.lang;
+if (getLang === "it") {
+    sidebarText = "PRODUZIONI";
+    langHref = "en/";
+    langText = "En";
+    sidebar.insertAdjacentHTML('beforeend', createSidebar());
+    mobileMenu.insertAdjacentHTML('beforeend', createMobileMenu());
+} else if (getLang === "en") {
+    sidebarText = "WORKS";
+    langHref = "../";
+    langText = "It";
+    sidebar.insertAdjacentHTML('beforeend', createSidebar());
+    mobileMenu.insertAdjacentHTML('beforeend', createMobileMenu());
+};
+const pagesLinksMenu = document.querySelectorAll(".sidebar-items, .nav-mobile a, .menu-items");
+pagesLinksMenu.forEach(link => {
+    const linkHref = link.getAttribute("href");
+    if (linkHref == currentPathname) {
+        link.classList.add("current");
+    };
+});
 
 // general // document height
 const documentHeight = () => {
@@ -61,7 +94,7 @@ if (anchorTags) {
             });
         });
     });
-}
+};
 
 // general // mobile menu
 const openMenu = document.getElementById("open-menu-mobile");
@@ -75,8 +108,8 @@ if (mobileMenu) {
     closeMenu.addEventListener("click", () => {
         mobileMenu.classList.remove("reveal");
         openMenu.style.pointerEvents = "all";
-    })
-}
+    });
+};
 
 // pages // image cover
 const imageOnLoad = document.querySelector(".loading");
@@ -84,9 +117,9 @@ if (imageOnLoad) {
     window.addEventListener("load", () => {
         setTimeout(() => {
             imageOnLoad.classList.add("hidden");
-        }, 1000)
-    })
-}
+        }, 1000);
+    });
+};
 
 // homepage // calendar
 const calendar = document.getElementById("calendar");
@@ -94,7 +127,7 @@ if (calendar) {
     window.addEventListener("scroll", () => {
         calendar.classList.add("fade");
     });
-}
+};
 
 // homepage // special cursor
 const spotCursor = document.getElementById("spotlight");
@@ -105,24 +138,23 @@ if (spotCursor) {
         spotCursor.style.left = x + "px";
         spotCursor.style.top = y + "px";
     });
-}
+};
 
 // special // la notte banner
 const spinBanner = document.querySelector(".banner");
 if (spinBanner) {
     window.addEventListener("scroll", () => {
         spinBanner.style.transform = "rotate(" + window.pageYOffset / 5 + "deg)";
-    })
-
+    });
     spinBanner.addEventListener("mouseenter", () => {
         spinBanner.style.transform = "rotate(" + 0 + "deg)";
-    })
-}
+    });
+};
 
 // special // arcipelago
 const projects = document.querySelectorAll(".project");
 if (projects) {
-    const projectLinks = document.querySelectorAll(".grid-arc .link");
+    const projectLinks = document.querySelectorAll(".group-link");
     const body = document.querySelector("body");
     const pageBtn = document.querySelector(".page-info-btn");
     const pageInfo = document.querySelector(".page-info");
@@ -131,25 +163,25 @@ if (projects) {
         link.addEventListener("click", (event) => {
             event.preventDefault();
             const href = link.getAttribute("href");
-            if (projects) {
-                projects.forEach(project => {
-                    if (href === `#${project.id}`) {
-                        project.style.display = "block";
-                        project.scrollIntoView({
-                            behavior: "smooth"
-                        });
-                        setTimeout(() => {
-                            body.style.overflow = "hidden"
-                        }, 1000);
-                    }
-                    const projectClose = document.querySelectorAll(".project-close");
-                    projectClose.forEach(btnClose => {
-                        btnClose.addEventListener("click", () => {
-                            project.style.display = "none";
-                        });
+
+            projects.forEach(project => {
+                if (href === `#${project.id}`) {
+                    project.style.display = "block";
+                    project.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                    setTimeout(() => {
+                        body.style.overflow = "hidden"
+                    }, 1000);
+                }
+                const projectClose = document.querySelectorAll(".project-close");
+                projectClose.forEach(btnClose => {
+                    btnClose.addEventListener("click", () => {
+                        project.style.display = "none";
                     });
                 });
-            }
+            });
+
             document.querySelector(href).scrollIntoView({
                 behavior: "smooth"
             });
@@ -161,4 +193,4 @@ if (projects) {
             pageInfo.classList.remove("open");
         });
     });
-}
+};
