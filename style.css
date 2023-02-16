@@ -49,6 +49,21 @@ em::-moz-selection {
     color: #ff0055;
 }
 
+p::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+br::-moz-selection,
+span::-moz-selection,
+a::-moz-selection,
+li::-moz-selection,
+img::-moz-selection,
+audio::-moz-selection,
+video::-moz-selection,
+div::-moz-selection,
+em::-moz-selection {
+    color: #ff0055;
+}
+
 p::selection,
 h1::selection,
 h2::selection,
@@ -73,6 +88,8 @@ em::selection {
     background-color: #000;
     z-index: 8;
     opacity: 1;
+    -webkit-transition: all 2s ease-in;
+    -o-transition: all 2s ease-in;
     transition: all 2s ease-in;
 }
 
@@ -478,11 +495,13 @@ nav {
 @keyframes move {
     0% {
         opacity: 0;
+        -webkit-transform: translateY(40px);
         transform: translateY(40px);
     }
 
     100% {
         opacity: 1;
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }
@@ -723,7 +742,6 @@ section {
     -ms-grid-row-align: start;
     align-self: start;
     z-index: 5;
-    position: -webkit-sticky;
     position: sticky;
     top: 10px;
 }
@@ -737,7 +755,6 @@ section {
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
     align-self: start;
-    position: -webkit-sticky;
     position: sticky;
     /* top: 15vh; */
     top: 20px;
@@ -794,7 +811,11 @@ section {
     -webkit-box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
     box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
     border-radius: 50%;
+    -webkit-transition: -webkit-transform .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: -webkit-transform .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    -o-transition: transform .5s cubic-bezier(0.65, 0.05, 0.36, 1);
     transition: transform .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: transform .5s cubic-bezier(0.65, 0.05, 0.36, 1), -webkit-transform .5s cubic-bezier(0.65, 0.05, 0.36, 1);
     background-color: #fff;
     mix-blend-mode: soft-light;
 }
@@ -805,6 +826,8 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -814,10 +837,14 @@ section {
 
 .page-info {
     width: 40vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 999;
     opacity: 0;
@@ -860,6 +887,8 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 999;
     cursor: pointer;
@@ -925,7 +954,6 @@ section {
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
     align-self: start;
-    position: -webkit-sticky;
     position: sticky;
     top: 20px;
     overflow-y: hidden;
@@ -1035,26 +1063,41 @@ section {
         width: 100vw;
         height: var(--doc-height);
         z-index: 8;
+        -webkit-transition: all .8s ease;
+        -o-transition: all .8s ease;
         transition: all .8s ease;
     }
 
     .menu-overlay.reveal {
         opacity: 1;
         pointer-events: all;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
         transform: translateY(0px);
     }
 
     .nav-mobile {
         opacity: 0;
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
         transform: translateY(30px);
+        -webkit-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
         transition: all 1.5s ease;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         gap: 12px
     }
 
     .menu-overlay.reveal .nav-mobile {
         opacity: 1;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
         transform: translateY(0px);
     }
 
@@ -1275,8 +1318,15 @@ section {
 
     .menu-groups {
         margin: 15vh 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
@@ -1295,6 +1345,8 @@ section {
 
     .page-info-btn {
         top: 20px;
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
         transform: translate(-50%, 0%);
     }
 
