@@ -66,10 +66,10 @@ if (getLang === "it") {
     sidebar.insertAdjacentHTML('beforeend', createSidebar());
     mobileMenu.insertAdjacentHTML('beforeend', createMobileMenu());
 };
-const pagesLinksMenu = document.querySelectorAll(".sidebar-items, .nav-mobile a, .menu-items");
+const pagesLinksMenu = document.querySelectorAll(".sidebar-items, .nav-mobile a, .menu-items:not(:last-of-type)");
 pagesLinksMenu.forEach(link => {
     const linkHref = link.getAttribute("href");
-    if (linkHref == currentPathname) {
+    if (linkHref.includes(currentPathname)) {
         link.classList.add("current");
     };
 });
