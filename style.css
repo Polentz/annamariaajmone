@@ -81,8 +81,6 @@ em::selection {
     pointer-events: none;
 }
 
-/* grid layout & classes */
-
 .grid,
 .grid-menu {
     display: -ms-grid;
@@ -759,11 +757,7 @@ section {
 
 .arc-visual-footer {
     position: static;
-    /* left: 0%;
-    right: 0%;
-    bottom: 50px; */
     z-index: 2;
-    /* height: 30vh; */
     height: 20vh;
     margin-bottom: 20px;
     background-image: url(media/arcipelago/Grilli-Gotici.svg);
@@ -817,9 +811,6 @@ section {
 .banner:hover {
     mix-blend-mode: difference;
 }
-
-
-/* new */
 
 .page-info {
     width: 40vw;
@@ -916,42 +907,6 @@ section {
     right: 25%;
 }
 
-/* .grid-arc div:nth-of-type(1) {
-    margin-top: 15%;
-    text-indent: 5%;
-}
-
-.grid-arc div:nth-of-type(2) {
-    margin-top: 5%;
-}
-
-.grid-arc div:nth-of-type(3) {
-    margin-top: 50%;
-}
-
-.grid-arc div:nth-of-type(4) {
-    margin-top: 35%;
-    text-indent: -5%;
-}
-
-.grid-arc div:nth-of-type(5) {
-    margin-top: 5%;
-}
-
-.grid-arc div:nth-of-type(6) {
-    margin-top: 75%;
-    text-indent: -10%;
-}
-
-.grid-arc div:nth-of-type(7) {
-    margin-top: 55%;
-    text-indent: 10%;
-}
-
-.grid-arc div:nth-of-type(8) {
-    margin-top: 0%;
-} */
-
 .project {
     height: var(--doc-height);
     display: none;
@@ -1006,7 +961,6 @@ section {
     position: fixed;
     bottom: 0;
 }
-
 
 @media screen and (max-width: 915px) {
     .page-label {
@@ -1178,11 +1132,6 @@ section {
         position: static;
     }
 
-    .grid-arc div {
-        margin: 0 !important;
-        text-indent: 0 !important;
-    }
-
     .project {
         overflow-y: scroll;
     }
@@ -1344,7 +1293,12 @@ section {
         left: 12px;
     }
 
-    /* .page-info {
+    .page-info-btn {
+        top: 20px;
+        transform: translate(-50%, 0%);
+    }
+
+    .page-info {
         width: calc(100vw - 24px);
-    } */
+    }
 }
