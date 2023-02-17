@@ -69,7 +69,7 @@ if (getLang === "it") {
 const pagesLinksMenu = document.querySelectorAll(".sidebar-items, .nav-mobile a, .menu-items:not(:last-of-type)");
 pagesLinksMenu.forEach(link => {
     const linkHref = link.getAttribute("href");
-    if (linkHref.includes(currentPathname)) {
+    if (linkHref == currentPathname) {
         link.classList.add("current");
     };
 });
@@ -194,3 +194,8 @@ if (projects) {
         });
     });
 };
+
+console.log(
+    '%cDesign & Code: Giulia Polenta',
+    'color: #0000ff; font-family: sans-serif; font-size: .8rem;'
+);
