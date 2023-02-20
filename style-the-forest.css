@@ -135,7 +135,7 @@
     right: 10px;
     top: 10px;
     cursor: pointer;
-    background: url("media/ui-cross-close-b.svg");
+    background: url("assets/ui/ui-cross-close-b.svg");
     z-index: 9;
     -webkit-transition: -webkit-filter .5s ease;
     transition: -webkit-filter .5s ease;

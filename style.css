@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Manrope", sans-serif;
+    src: url("assets/fonts/Manrope-VariableFont_wght.ttf") format("ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -866,7 +871,7 @@ section {
     right: 10px;
     top: 10px;
     cursor: pointer;
-    background: url("media/ui-cross-close-b.svg");
+    background: url("assets/ui/ui-cross-close-b.svg");
     z-index: 9;
     -webkit-transition: -webkit-filter .5s ease;
     transition: -webkit-filter .5s ease;
@@ -971,7 +976,7 @@ section {
     left: 30px;
     top: 30px;
     cursor: pointer;
-    background: url("media/ui-arrow-up.svg");
+    background: url("assets/ui/ui-arrow-up.svg");
     z-index: 9;
     -webkit-transition: -webkit-filter .5s ease;
     transition: -webkit-filter .5s ease;
