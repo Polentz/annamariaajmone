@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Manrope", sans-serif;
-    src: url("assets/fonts/Manrope-VariableFont_wght.ttf") format("ttf");
+    src: url("assets/fonts/manrope-variablefont_wght-webfont.woff2") format('woff2'),
+        url("assets/fonts/manrope-variablefont_wght-webfont.woff") format('woff');
 }
 
 * {
