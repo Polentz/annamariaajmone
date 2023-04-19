@@ -39,6 +39,10 @@ footer {
     mix-blend-mode: difference;
 }
 
+.banner {
+    background-color: transparent;
+}
+
 #spotlight {
     width: 250px;
     height: 250px;
@@ -58,6 +62,8 @@ footer {
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: -1;
+    display: none;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 915px) {

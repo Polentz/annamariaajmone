@@ -290,6 +290,8 @@
     background-size: cover;
     z-index: 1;
     cursor: crosshair;
+    transition: width .5s ease, height .5s ease;
+    display: none;
 }
 
 .audio-wrapper {

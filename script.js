@@ -133,10 +133,14 @@ if (calendar) {
 const spotCursor = document.getElementById("spotlight");
 if (spotCursor) {
     document.addEventListener("mousemove", (event) => {
+        spotCursor.style.display = "block";
         let x = event.pageX;
         let y = event.pageY;
         spotCursor.style.left = x + "px";
         spotCursor.style.top = y + "px";
+    });
+    document.addEventListener("mouseout", () => {
+        spotCursor.style.display = "none";
     });
 };
 

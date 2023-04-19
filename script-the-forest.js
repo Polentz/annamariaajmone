@@ -142,6 +142,17 @@ longTexts.forEach(text => {
 });
 
 
+const spotlightText = document.querySelector(".spotlight-text");
+spotlightText.addEventListener("mouseenter", () => {
+    cursor.style.width = "400px";
+    cursor.style.height = "400px";
+});
+spotlightText.addEventListener("mouseleave", () => {
+    cursor.style.width = "250px";
+    cursor.style.height = "250px";
+});
+
+
 
 
 
