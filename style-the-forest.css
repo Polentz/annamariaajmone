@@ -227,9 +227,11 @@
 }
 
 .text-container {
+    position: relative;
     margin: 15% 25% 5% 20px;
     height: 100vh;
     color: #fff;
+    z-index: 2;
 }
 
 .text-container p {

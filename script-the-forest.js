@@ -28,7 +28,7 @@ const openElement = (trigger, element, className) => {
         document.getElementById(element).classList.toggle(className);
         event.stopPropagation();
     });
-}
+};
 
 const soundElement = (button, element) => {
     document.getElementById(button).addEventListener("click", () => {
@@ -38,7 +38,7 @@ const soundElement = (button, element) => {
         else
             audio.pause();
     });
-}
+};
 
 const typewriterText = "Roland Hammel tells us how wolves rather hunt sheep than deers and keep attacking until everything around is quiet again.                    ";
 const typewriter = (target, text, speed) => {
@@ -49,10 +49,10 @@ const typewriter = (target, text, speed) => {
             textArea.innerHTML = text.substring(0, pointer);
         } else {
             pointer = -1;
-        }
+        };
         pointer++;
     }, speed);
-}
+};
 
 const videoElement = (button, element) => {
     document.getElementById(button).addEventListener("click", () => {
@@ -63,12 +63,11 @@ const videoElement = (button, element) => {
         const videoButton = document.getElementById(button);
         if (videoButton.innerHTML == "UNMUTE / VOLUME UP") {
             videoButton.innerHTML = "MUTE";
-        }
-        else {
+        } else {
             videoButton.innerHTML = "UNMUTE / VOLUME UP";
-        }
+        };
     });
-}
+};
 
 const mobileVersion = (trigger, element, className, otherElement, otherClassName) => {
     document.getElementById(trigger).addEventListener("click", (event) => {
@@ -76,7 +75,7 @@ const mobileVersion = (trigger, element, className, otherElement, otherClassName
         document.getElementById(otherElement).classList.toggle(otherClassName);
         event.stopPropagation();
     });
-}
+};
 
 // shutter effect
 const area = document.querySelector(".shutter-section");
@@ -104,7 +103,7 @@ document.addEventListener("scroll", () => {
         content.style.background = "#000";
         menu.style.display = "none";
         btn.style.opacity = "0";
-        cursor.style.display = "";
+        cursor.style.display = "block";
         // get cursor
         window.addEventListener("mousemove", (event) => {
             let x = event.pageX;
@@ -117,7 +116,7 @@ document.addEventListener("scroll", () => {
         menu.style.display = "";
         btn.style.opacity = "1";
         cursor.style.display = "none";
-    }
+    };
 });
 
 // get the href via js
