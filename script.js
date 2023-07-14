@@ -206,12 +206,12 @@ if (projects) {
     });
 };
 
+// special // bleah
 const draggableElems = document.querySelectorAll(".draggable");
 let draggies = []
 for (let i = 0; i < draggableElems.length; i++) {
     let draggableElem = draggableElems[i];
     let draggie = new Draggabilly(draggableElem, {
-        // options...
     });
     draggies.push(draggie);
 }
@@ -219,14 +219,37 @@ for (let i = 0; i < draggableElems.length; i++) {
 const collageMove = document.querySelector(".collage-move");
 const collageJs = () => {
     const collageContainer = document.querySelector(".collage-layout");
-    const collageElements = document.querySelectorAll(".collage-element");
     collageContainer.classList.toggle("stuck");
-    collageElements.forEach(element => {
-        element.classList.toggle("send-to-back");
-    });
-    collageMove.classList.toggle("rotate");
 };
 
-collageMove.addEventListener("click", () => {
-    collageJs();
-});
+const soundElement = () => {
+    const buttons = document.querySelectorAll(".audio");
+    buttons.forEach(button => {
+        const playButton = button.querySelector(".audio-button")
+        const svg = button.querySelector(".audio-svg");
+        const audio = button.querySelector(".audio-file");
+        playButton.addEventListener("click", () => {
+            svg.classList.toggle("play");
+            if (audio.paused) {
+                audio.play();
+                playButton.innerHTML = "STOP";
+            } else {
+                audio.pause();
+                playButton.innerHTML = "PLAY";
+            };
+        });
+        audio.addEventListener("timeupdate", () => {
+            if (audio.duration === audio.currentTime) {
+                svg.classList.remove("play");
+                playButton.innerHTML = "PLAY";
+            };
+        });
+    });
+};
+
+if (collageMove) {
+    collageMove.addEventListener("click", () => {
+        collageJs();
+    });
+    soundElement();
+}

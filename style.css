@@ -973,9 +973,40 @@ section {
     padding-bottom: 20px;
 }
 
+.project-close {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    cursor: pointer;
+    background: url("assets/ui/ui-arrow-up.svg");
+    z-index: 9;
+    -webkit-transition: -webkit-filter .5s ease;
+    transition: -webkit-filter .5s ease;
+    -o-transition: filter .5s ease;
+    transition: filter .5s ease;
+    transition: filter .5s ease, -webkit-filter .5s ease;
+}
+
+.project-close:hover {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.footer-arc {
+    position: fixed;
+    bottom: 0;
+}
+
+/* bleah!!! */
+
 .collage-layout {
+    width: 100%;
     min-height: var(--doc-height);
     position: absolute;
+    padding: 0;
+    margin: 0;
 }
 
 .collage-layout.stuck {
@@ -989,10 +1020,6 @@ section {
     z-index: 6;
     transform-origin: left;
     pointer-events: none;
-}
-
-.collage-element.send-to-back {
-    z-index: 0;
 }
 
 .collage-element-wrapper {
@@ -1038,12 +1065,24 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2px;
+    transition: all .5s ease;
 }
 
 .collage-button svg {
     width: 2rem;
     height: 2rem;
-    fill: #ff3927;
+    stroke: #ff3927;
+    stroke-width: 2px;
+    transition: all .5s ease;
+}
+
+.collage-button:hover {
+    background-color: #ff3927;
+}
+
+.collage-button svg:hover {
+    stroke: #fff;
 }
 
 .draggable {
@@ -1071,15 +1110,15 @@ section {
 }
 
 .collage-element:nth-of-type(4) {
-    top: 50%;
-    left: 2%;
+    top: 40%;
+    left: 78%;
     transform: rotate(-2deg);
 }
 
 .collage-element:nth-of-type(5) {
-    top: 10%;
+    top: 5%;
     right: 5%;
-    transform: rotate(0deg);
+    transform: rotate(3deg);
 }
 
 .collage-element:nth-of-type(6) {
@@ -1089,7 +1128,7 @@ section {
 }
 
 .collage-element:nth-of-type(7) {
-    top: 80%;
+    top: 70%;
     right: 25%;
     transform: rotate(5deg);
 }
@@ -1107,79 +1146,234 @@ section {
 }
 
 .collage-element:nth-of-type(10) {
+    width: 50%;
     top: 55%;
     left: 20%;
     transform: rotate(-10deg);
 }
 
 .collage-element:nth-of-type(11) {
+    width: 75%;
     top: 85%;
     left: 15%;
     transform: rotate(5deg);
 }
 
 .collage-element:nth-of-type(12) {
-    width: 15vw;
     top: 23%;
-    left: 9%;
+    left: 15%;
     transform: rotate(5deg);
 }
 
 .collage-element:nth-of-type(13) {
     top: 23%;
-    left: 5%;
+    left: 0%;
     transform: rotate(2deg);
 }
 
+.collage-element.audio {
+    width: auto;
+    top: 23%;
+    left: 60%;
+}
+
+@keyframes equalize {
+    0% {
+        height: 60px;
+    }
+
+    4% {
+        height: 50px;
+    }
+
+    8% {
+        height: 40px;
+    }
+
+    12% {
+        height: 30px;
+    }
+
+    16% {
+        height: 20px;
+    }
+
+    20% {
+        height: 30px;
+    }
+
+    24% {
+        height: 40px;
+    }
+
+    28% {
+        height: 10px;
+    }
+
+    32% {
+        height: 40px;
+    }
+
+    36% {
+        height: 60px;
+    }
+
+    40% {
+        height: 20px;
+    }
+
+    44% {
+        height: 40px;
+    }
+
+    48% {
+        height: 70px;
+    }
+
+    52% {
+        height: 30px;
+    }
+
+    56% {
+        height: 10px;
+    }
+
+    60% {
+        height: 30px;
+    }
+
+    64% {
+        height: 50px;
+    }
+
+    68% {
+        height: 60px;
+    }
+
+    72% {
+        height: 70px;
+    }
+
+    76% {
+        height: 80px;
+    }
+
+    80% {
+        height: 70px;
+    }
+
+    84% {
+        height: 60px;
+    }
+
+    88% {
+        height: 50px;
+    }
+
+    92% {
+        height: 60px;
+    }
+
+    96% {
+        height: 70px;
+    }
+
+    100% {
+        height: 80px;
+    }
+}
+
+.audio-svg {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: solid 1px #ff3927;
+    padding: 0.5rem;
+    transition: all .5s ease;
+}
+
+.audio-button {
+    color: #ff3927;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.audio-svg:has(.audio-button:hover) {
+    background-color: #ff3927;
+}
+
+.audio-button:hover {
+    color: #fff;
+}
+
+.equilizer {
+    height: 48px;
+    width: 48px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.audio-svg.play .bar {
+    animation-play-state: running;
+}
+
+.bar {
+    fill: #ff3927;
+    width: 15px;
+    -webkit-animation: equalize 4s 0s infinite;
+    animation: equalize 4s 0s infinite;
+    animation-play-state: paused;
+}
+
+.bar:nth-child(2) {
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+.bar:nth-child(3) {
+    -webkit-animation-delay: -2.3s;
+    animation-delay: -2.3s;
+}
+
+.bar:nth-child(4) {
+    -webkit-animation-delay: -2.4s;
+    animation-delay: -2.4s;
+}
+
+.bar:nth-child(5) {
+    -webkit-animation-delay: -2.1s;
+    animation-delay: -2.1s;
+}
+
+
 .collage-move {
-    width: 2rem;
-    height: 2rem;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff3927;
     border: solid 1px #ff3927;
-    border-radius: 50%;
+    border-radius: 32px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 8;
-    transition: transform .5s ease;
+    transition: all .5s ease;
+    -webkit-box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
+    box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
 }
 
-.collage-move svg {
-    width: 2rem;
-    height: 2rem;
-    fill: #ff3927;
-    position: relative;
-}
-
-.collage-move.rotate {
-    transform: rotate(45deg);
-}
-
-.project-close {
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    left: 30px;
-    top: 30px;
-    cursor: pointer;
-    background: url("assets/ui/ui-arrow-up.svg");
-    z-index: 9;
-    -webkit-transition: -webkit-filter .5s ease;
-    transition: -webkit-filter .5s ease;
-    -o-transition: filter .5s ease;
-    transition: filter .5s ease;
-    transition: filter .5s ease, -webkit-filter .5s ease;
-}
-
-.project-close:hover {
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-}
-
-.footer-arc {
-    position: fixed;
-    bottom: 0;
+.collage-move:hover {
+    color: #ff3927;
+    background-color: #fff;
 }
 
 @media screen and (max-width: 915px) {
@@ -1546,5 +1740,19 @@ section {
 
     .page-info {
         width: calc(100vw - 24px);
+    }
+
+    .collage-layout {
+        top: 0;
+        overflow: hidden;
+    }
+
+    .collage-layout.stuck {
+        display: none;
+    }
+
+    .collage-move {
+        bottom: 40px;
+        right: 40px;
     }
 }
