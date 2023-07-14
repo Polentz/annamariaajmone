@@ -1030,7 +1030,6 @@ section {
 
 .glow {
     position: relative;
-    -webkit-box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
     box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
 }
 
@@ -1043,6 +1042,7 @@ section {
     width: 102%;
     height: 102%;
     background-color: #fff;
+    -webkit-filter: blur(8px);
     filter: blur(8px);
     z-index: -1;
 }
@@ -1050,6 +1050,7 @@ section {
 .collage-element-wrapper img {
     width: 100%;
     display: block;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -1087,6 +1088,9 @@ section {
 
 .draggable {
     cursor: move;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
@@ -1175,6 +1179,112 @@ section {
     width: auto;
     top: 23%;
     left: 60%;
+}
+
+@-webkit-keyframes equalize {
+    0% {
+        height: 60px;
+    }
+
+    4% {
+        height: 50px;
+    }
+
+    8% {
+        height: 40px;
+    }
+
+    12% {
+        height: 30px;
+    }
+
+    16% {
+        height: 20px;
+    }
+
+    20% {
+        height: 30px;
+    }
+
+    24% {
+        height: 40px;
+    }
+
+    28% {
+        height: 10px;
+    }
+
+    32% {
+        height: 40px;
+    }
+
+    36% {
+        height: 60px;
+    }
+
+    40% {
+        height: 20px;
+    }
+
+    44% {
+        height: 40px;
+    }
+
+    48% {
+        height: 70px;
+    }
+
+    52% {
+        height: 30px;
+    }
+
+    56% {
+        height: 10px;
+    }
+
+    60% {
+        height: 30px;
+    }
+
+    64% {
+        height: 50px;
+    }
+
+    68% {
+        height: 60px;
+    }
+
+    72% {
+        height: 70px;
+    }
+
+    76% {
+        height: 80px;
+    }
+
+    80% {
+        height: 70px;
+    }
+
+    84% {
+        height: 60px;
+    }
+
+    88% {
+        height: 50px;
+    }
+
+    92% {
+        height: 60px;
+    }
+
+    96% {
+        height: 70px;
+    }
+
+    100% {
+        height: 80px;
+    }
 }
 
 @keyframes equalize {
@@ -1314,12 +1424,11 @@ section {
 .equilizer {
     height: 48px;
     width: 48px;
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
 .audio-svg.play .bar {
+    -webkit-animation-play-state: running;
     animation-play-state: running;
 }
 
@@ -1328,6 +1437,7 @@ section {
     width: 15px;
     -webkit-animation: equalize 4s 0s infinite;
     animation: equalize 4s 0s infinite;
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
 
@@ -1367,7 +1477,6 @@ section {
     cursor: pointer;
     z-index: 8;
     transition: all .5s ease;
-    -webkit-box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
     box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
 }
 
