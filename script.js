@@ -166,43 +166,46 @@ if (spinBanner) {
 const projects = document.querySelectorAll(".project");
 if (projects) {
     const projectLinks = document.querySelectorAll(".group-link");
-    const body = document.querySelector("body");
     const pageBtn = document.querySelector(".page-info-btn");
     const pageInfo = document.querySelector(".page-info");
     const infoClose = document.querySelector(".info-close");
+    const projectClose = document.querySelectorAll(".project-close");
     projectLinks.forEach(link => {
         link.addEventListener("click", (event) => {
             event.preventDefault();
             const href = link.getAttribute("href");
-
             projects.forEach(project => {
                 if (href === `#${project.id}`) {
                     project.style.display = "block";
                     project.scrollIntoView({
                         behavior: "smooth"
                     });
-                    setTimeout(() => {
-                        body.style.overflow = "hidden"
-                    }, 1000);
-                }
-                const projectClose = document.querySelectorAll(".project-close");
-                projectClose.forEach(btnClose => {
-                    btnClose.addEventListener("click", () => {
-                        project.style.display = "none";
-                    });
-                });
+                } else {
+                    project.style.display = "none";
+                };
             });
-
-            document.querySelector(href).scrollIntoView({
+        });
+    });
+    projectClose.forEach(btnClose => {
+        btnClose.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
                 behavior: "smooth"
             });
         });
-        pageBtn.addEventListener("click", () => {
-            pageInfo.classList.add("open");
-        });
-        infoClose.addEventListener("click", () => {
-            pageInfo.classList.remove("open");
-        });
+    });
+    window.addEventListener("scroll", () => {
+        if (window.scrollY == 0) {
+            projects.forEach(project => {
+                project.style.display = "none";
+            });
+        };
+    });
+    pageBtn.addEventListener("click", () => {
+        pageInfo.classList.add("open");
+    });
+    infoClose.addEventListener("click", () => {
+        pageInfo.classList.remove("open");
     });
 };
 

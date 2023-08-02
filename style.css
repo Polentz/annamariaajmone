@@ -946,17 +946,14 @@ section {
 }
 
 .project {
-    height: var(--doc-height);
     display: none;
     background-color: #fff;
-    z-index: 5;
+    z-index: 6;
     position: sticky;
     top: var(--doc-height);
     left: 0;
-}
-
-.project .grid {
-    height: -webkit-fill-available;
+    margin-bottom: 0;
+    border-top: solid 1px #000;
 }
 
 .project-text {
@@ -964,29 +961,35 @@ section {
     -ms-grid-row-align: start;
     align-self: start;
     position: sticky;
-    top: 20px;
-    overflow-y: hidden;
+    top: 0;
+    padding-top: 20px;
 }
 
 .project-gallery {
-    overflow-y: scroll;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .project-close {
     width: 15px;
     height: 15px;
-    position: absolute;
-    left: 30px;
-    top: 30px;
+    align-self: start;
+    position: sticky;
+    top: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
     cursor: pointer;
-    background: url("assets/ui/ui-arrow-up.svg");
     z-index: 9;
     -webkit-transition: -webkit-filter .5s ease;
     transition: -webkit-filter .5s ease;
     -o-transition: filter .5s ease;
     transition: filter .5s ease;
     transition: filter .5s ease, -webkit-filter .5s ease;
+}
+
+.project-close svg {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
 }
 
 .project-close:hover {
