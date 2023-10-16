@@ -201,12 +201,16 @@ if (projects) {
             });
         };
     });
-    pageBtn.addEventListener("click", () => {
-        pageInfo.classList.add("open");
-    });
-    infoClose.addEventListener("click", () => {
-        pageInfo.classList.remove("open");
-    });
+    if (pageBtn) {
+        pageBtn.addEventListener("click", () => {
+            pageInfo.classList.add("open");
+        });
+    }
+    if (infoClose) {
+        infoClose.addEventListener("click", () => {
+            pageInfo.classList.remove("open");
+        });
+    }
 };
 
 // special // bleah
