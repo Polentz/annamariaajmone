@@ -413,8 +413,11 @@ nav {
 }
 
 .sidebar li {
-    margin-bottom: 2px;
+    /* margin-bottom: 2px;
+    text-transform: uppercase; */
+    margin-bottom: 12px;
     text-transform: uppercase;
+    line-height: 1.4;
 }
 
 .sidebar-items,
@@ -422,7 +425,6 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
-    line-height: 1;
 }
 
 .menu-name a {
@@ -1840,7 +1842,8 @@ section {
     }
 
     .project-close {
-        left: 12px;
+        left: 0;
+        margin: 0;
     }
 
     .page-info-btn {

@@ -6,46 +6,48 @@
 } */
 
 .body-home {
-    background-image: url("media/images/red.jpg");
-    background-position: center;
+    background-image: url("media/images/img1_7.jpg"), linear-gradient(rgb(255 255 255 / 25%), rgb(255 255 255 / 85%));
+    background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
-    cursor: crosshair;
+    background-blend-mode: overlay;
+    /* color: #000000; */
+    cursor: none;
 }
 
-a,
+/* a,
 h1,
 h2,
 p {
-    color: #fff;
-    text-decoration-color: #fff;
-}
+    color: #000000;
+    text-decoration-color: #000000;
+} */
 
-footer {
+/* footer {
     font-weight: 700;
-}
+} */
 
-.menu-name a {
+/* .menu-name a {
     border-bottom: solid 1px rgba(255, 255, 255, 0.3);
-}
+} */
 
-.link:hover {
+/* .link:hover {
     text-decoration: line-through;
-    text-decoration-color: #fff;
-}
+    text-decoration-color: #000000;
+} */
 
-.ui-comp {
+/* .ui-comp {
     mix-blend-mode: difference;
-}
+} */
 
 .banner {
     background-color: transparent;
 }
 
 #spotlight {
-    width: 250px;
-    height: 250px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -55,11 +57,13 @@ footer {
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center;
-    opacity: 0.95;
+    /* opacity: 0.95;
     mix-blend-mode: exclusion;
     background-image: url(media/la-notte/spotlight.svg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    background-color: #5b909b;
+    filter: blur(1px);
     pointer-events: none;
     z-index: -1;
     display: none;
@@ -69,7 +73,7 @@ footer {
 @media screen and (max-width: 915px) {
 
     .menu-label p {
-        color: #fff;
+        color: #000000;
     }
 
     .hide-on-mobile {

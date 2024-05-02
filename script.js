@@ -26,6 +26,7 @@ const createSidebar = () => {
     <ul>
         <li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
         <li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
+        <li><a href="the-forest-and-the-encounters.html" class="link sidebar-items">The forest and the encounters</a></li>
     </ul>`;
 }
 const createMobileMenu = () => {
@@ -46,6 +47,7 @@ const createMobileMenu = () => {
         <ul>
             <li><a href="arcipelago.html">Arcipelago</a></li>
             <li><a href="nobody.html">Nobody's Indiscipline</a></li>
+            <li><a href="the-forest-and-the-encounters.html">The forest and the encounters</a></li>
         </ul>
         <ul>
             <li><a href="index.html">Home</a></li>
