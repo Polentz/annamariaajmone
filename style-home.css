@@ -6,35 +6,36 @@
 } */
 
 .body-home {
-    background-image: url("media/images/img1_7.jpg"), linear-gradient(rgb(255 255 255 / 25%), rgb(255 255 255 / 85%));
+    /* background-image: url("media/images/img1_7.jpg"), linear-gradient(rgb(255 255 255 / 25%), rgb(255 255 255 / 85%)); */
+    background-image: url("media/images/img1_8.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: overlay;
-    /* color: #000000; */
+    /* background-blend-mode: overlay; */
+    color: #ffffff;
     cursor: none;
 }
 
-/* a,
+a,
 h1,
 h2,
 p {
-    color: #000000;
-    text-decoration-color: #000000;
-} */
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
 
 /* footer {
     font-weight: 700;
 } */
 
-/* .menu-name a {
+.menu-name a {
     border-bottom: solid 1px rgba(255, 255, 255, 0.3);
-} */
+}
 
-/* .link:hover {
+.link:hover {
     text-decoration: line-through;
-    text-decoration-color: #000000;
-} */
+    text-decoration-color: #ffffff;
+}
 
 /* .ui-comp {
     mix-blend-mode: difference;
@@ -73,7 +74,7 @@ p {
 @media screen and (max-width: 915px) {
 
     .menu-label p {
-        color: #000000;
+        color: #ffffff;
     }
 
     .hide-on-mobile {
