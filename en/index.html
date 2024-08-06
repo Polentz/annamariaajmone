@@ -28,24 +28,10 @@
 </head>
 
 <body class="body-home">
-    <!-- <div class="banner">
-        <div class="banner-text">
-            <a href="../the-forest-and-the-encounters.html">
-                <svg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_150_2)">
-                        <path
-                            d="M20.66 9.83H11.54L18.02 3.34L17.32 2.63L10.83 9.12V0H9.83V9.12L3.34 2.63L2.63 3.34L9.12 9.83H0V10.83H9.12L2.63 17.32L3.34 18.02L9.83 11.54V20.66H10.83V11.53L17.32 18.02L18.02 17.32L11.54 10.83H20.66V9.83Z"
-                            fill="#ff0055" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_150_2">
-                            <rect width="20.66" height="20.66" fill="#ff0055" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </a>
-        </div>
-    </div> -->
+    <div class="new-banner">
+        <a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/"></a>
+    </div>
+
     <div class="menu-mobile">
         <div class="menu-name">
             <a href="../index.html">AA</a>
@@ -137,16 +123,73 @@
                 <div class="cal-column">
                     <p>UPCOMING</p>
                     <div class="cal-block">
+                        <p>September 10-11</p>
+                        <p>I pianti e i lamenti dei pesci fossili</p>
+                        <p><em>Preview</em></p>
+                        <a href="https://www.shorttheatre.org/en/eventi/annamaria-ajmone/" target="_blank"
+                            rel="noopener noreferrer">Short Theatre</a>
+                        <p>Roma</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>September 21</p>
+                        <p>BLEAH!!!</p>
+                        <p>Frittelli Arte contemporanea Firenze</p>
+                        <p>as part of <a href="https://fabbricaeuropa.net/events/annamaria-ajmone-laura-agnusdei-bleah/"
+                                target="_blank" rel="noopener noreferrer">Fabbrica Europa 2024</a></p>
+                        <p>Firenze</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>September 26</p>
+                        <p>La notte è il mio giorno preferito</p>
+                        <a href="https://www.muse.it/eventi/teatro-antropocene-2024/" target="_blank"
+                            rel="noopener noreferrer">Muse</a>
+                        <p>Teatro Antropocene</p>
+                        <p>Trento</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>September 29</p>
+                        <p>BLEAH!!!</p>
+                        <a href="https://www.novarajazz.org/" target="_blank" rel="noopener noreferrer">Novara Jazz</a>
+                        <p>Novara</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>October 9-10</p>
+                        <p>Senza titolo</p>
+                        <a href="https://www.teatrogrande.it/en/spettacolo/annamaria-ajmone-senza-titolo-2/"
+                            target="_blank" rel="noopener noreferrer">Teatro Grande</a>
+                        <p>Brescia</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>October 24-25-26</p>
+                        <p>I pianti e i lamenti dei pesci fossili</p>
+                        <p><em>Première</em></p>
+                        <p>Triennale Milano Teatro</p>
+                        <p>Milano</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>November 9-10</p>
+                        <p>I pianti e i lamenti dei pesci fossili</p>
+                        <a href="https://www.iteatri.re.it/festival-aperto-2024/" target="_blank"
+                            rel="noopener noreferrer">Festival Aperto</a>
+                        <p>Reggio Emilia</p>
+                    </div>
+                    <div class="cal-block">
+                        <p>November 23-24</p>
+                        <p>I pianti e i lamenti dei pesci fossili</p>
+                        <p>Cango</p>
+                        <p>Firenze</p>
+                    </div>
+                </div>
+
+                <div class="cal-column">
+                    <p>PAST</p>
+                    <div class="cal-block">
                         <p>June 15</p>
                         <p>DUE</p>
                         <p>Festa della danza di Roma</p>
                         <p>Villa Gordiani</p>
                         <p>Roma</p>
                     </div>
-                </div>
-
-                <div class="cal-column">
-                    <p>PAST</p>
                     <div class="cal-block">
                         <p>June 6</p>
                         <p>Senza titolo</p>
@@ -187,7 +230,28 @@
     <div id="spotlight"></div>
     <div class="line"></div>
 
+    <script src="../assets/libraries/blotter.min.js"></script>
+    <script src="../assets/libraries/liquidDistortMaterial.js"></script>
     <script src="../script.js"></script>
+    <script>
+        var text = new Blotter.Text("LOOK HERE", {
+            family: "sans-serif",
+            size: 40,
+            fill: "#171717"
+        });
+
+        var material = new Blotter.LiquidDistortMaterial();
+
+        var blotter = new Blotter(material, { texts: text });
+
+        var scope = blotter.forText(text);
+
+        var container = document.querySelector(".new-banner a");
+
+        window.addEventListener("load", () => {
+            scope.appendTo(container);
+        })
+    </script>
 </body>
 
 </html>

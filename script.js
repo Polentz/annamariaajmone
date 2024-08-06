@@ -27,9 +27,11 @@ const createSidebar = () => {
         <li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
         <li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
     </ul>
-    <ul>
+    <!-- <ul>
+        <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/" class="link sidebar-items">I pianti e i lamenti dei pesci fossili</a></li>   
         <li><a href="the-forest-and-the-encounters.html" class="link sidebar-items">The forest and the encounters</a></li>   
-    </ul>`;
+    </ul> -->
+    `;
 }
 const createMobileMenu = () => {
     return `
@@ -50,9 +52,10 @@ const createMobileMenu = () => {
             <li><a href="arcipelago.html">Arcipelago</a></li>
             <li><a href="nobody.html">Nobody's Indiscipline</a></li>
         </ul>
-        <ul>
+        <!-- <ul>
+            <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/">I pianti e i lamenti dei pesci fossili</a></li>   
             <li><a href="the-forest-and-the-encounters.html">The forest and the encounters</a></li>
-        </ul>
+        </ul> -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -92,8 +95,6 @@ const documentHeight = () => {
     const doc = document.documentElement;
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
 };
-window.addEventListener("resize", documentHeight)
-documentHeight();
 
 // general // href via js
 const anchorTags = document.querySelectorAll(".js-href");
@@ -137,7 +138,10 @@ if (imageOnLoad) {
 // homepage // calendar
 const calendar = document.getElementById("calendar");
 if (calendar) {
-    window.addEventListener("scroll", () => {
+    // window.addEventListener("scroll", () => {
+    //     calendar.classList.add("fade");
+    // });
+    window.addEventListener("load", () => {
         calendar.classList.add("fade");
     });
 };
@@ -265,4 +269,11 @@ if (collageMove) {
         collageJs();
     });
     soundElement();
-}
+};
+
+window.addEventListener("load", () => {
+    history.scrollRestoration = "manual";
+    documentHeight();
+});
+
+window.addEventListener("resize", documentHeight);

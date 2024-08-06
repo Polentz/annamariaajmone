@@ -47,6 +47,7 @@ body {
 p::-moz-selection,
 h1::-moz-selection,
 h2::-moz-selection,
+h3::-moz-selection,
 br::-moz-selection,
 span::-moz-selection,
 a::-moz-selection,
@@ -55,28 +56,15 @@ img::-moz-selection,
 audio::-moz-selection,
 video::-moz-selection,
 div::-moz-selection,
-em::-moz-selection {
-    color: #ff0055;
-}
-
-p::-moz-selection,
-h1::-moz-selection,
-h2::-moz-selection,
-br::-moz-selection,
-span::-moz-selection,
-a::-moz-selection,
-li::-moz-selection,
-img::-moz-selection,
-audio::-moz-selection,
-video::-moz-selection,
-div::-moz-selection,
-em::-moz-selection {
+em::-moz-selection,
+strong::-moz-selection {
     color: #ff0055;
 }
 
 p::selection,
 h1::selection,
 h2::selection,
+h3::selection,
 br::selection,
 span::selection,
 a::selection,
@@ -85,7 +73,8 @@ img::selection,
 audio::selection,
 video::selection,
 div::selection,
-em::selection {
+em::selection,
+strong::selection {
     color: #ff0055;
 }
 
@@ -311,6 +300,11 @@ em::selection {
     -ms-grid-column: 4;
     -ms-grid-column-span: 2;
     grid-column: 4 / 6;
+}
+
+.area-2-3-2-3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 .area-4-6 img,
