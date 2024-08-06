@@ -1,5 +1,5 @@
-/* .body-home {      
-    background-image: url("media/About-Hero.jpg");
+/* .body-home {
+    background-image: url("media/images/About-Hero.jpg");
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,14 +31,6 @@ p {
     text-decoration: line-through;
     text-decoration-color: #000;
 }
-
-/* .ui-comp {
-    mix-blend-mode: difference;
-} */
-
-/* .banner {
-    background-color: transparent;
-} */
 
 .new-banner {
     width: 144px;
@@ -82,7 +74,6 @@ p {
 }
 
 @media screen and (max-width: 915px) {
-
     .menu-label p {
         color: #000;
     }
@@ -93,11 +84,12 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-    .body-home {
-        background-repeat: repeat-y;
-    }
-
     #spotlight {
         display: none;
+    }
+
+    .new-banner {
+        width: 96px;
+        height: 96px;
     }
 }
