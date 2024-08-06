@@ -8,6 +8,11 @@
 .body-home {
     color: #000;
     cursor: none;
+    background-image: url("media/images/bg.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a,
