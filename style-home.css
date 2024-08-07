@@ -8,10 +8,10 @@
 .body-home {
     color: #000;
     cursor: none;
-    background-image: url("media/images/bg-purple.png");
-    background-position: top left;
+    background-image: url("media/images/stage.jpg");
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 85%;
     background-attachment: fixed;
 }
 
