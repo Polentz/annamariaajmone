@@ -59,7 +59,7 @@
 }
 
 .start-section {
-    background-image: url(/media/la-notte/red.jpg);
+    background-image: url("/media/la-notte/red.jpg");
     background-size: auto;
     background-repeat: repeat;
     background-position-y: center;
@@ -135,7 +135,7 @@
     right: 10px;
     top: 10px;
     cursor: pointer;
-    background: url(/media/ui/ui-cross-close-b.svg);
+    background: url("/media/ui/ui-cross-close-b.svg");
     z-index: 9;
     -webkit-transition: -webkit-filter .5s ease;
     transition: -webkit-filter .5s ease;
@@ -215,7 +215,7 @@
 }
 
 .map {
-    background-image: url(/media/la-notte/fiume.svg);
+    background-image: url("/media/la-notte/fiume.svg");
     background-position: 25% 0;
     background-repeat: no-repeat;
     background-size: contain;
@@ -287,7 +287,7 @@
     width: 250px;
     height: 250px;
     opacity: 0.95;
-    background-image: url(/media/la-notte/spotlight.svg);
+    background-image: url("/media/la-notte/spotlight.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -354,7 +354,7 @@
 }
 
 .field-section {
-    background-image: url(/media/la-notte/IMG_2661.jpg);
+    background-image: url("/media/la-notte/IMG_2661.jpg");
     background-position: center left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -726,7 +726,7 @@
     }
 
     .map-mobile {
-        background-image: url(/media/la-notte/fiume.svg);
+        background-image: url("/media/la-notte/fiume.svg");
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: contain;
