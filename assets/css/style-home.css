@@ -1,7 +1,7 @@
 .body-home {
     color: #000;
     cursor: none;
-    background-image: url("media/images/stage.jpg");
+    background-image: url(/media/images/stage.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 85%;
