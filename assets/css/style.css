@@ -1787,10 +1787,10 @@ section {
         grid-column: 3 / 5;
     }
 
-    /* .need-margin,
+    .need-margin,
     .need-extra-margin {
         margin: 0;
-    } */
+    }
 
     .main-text p,
     .main-text h1,
