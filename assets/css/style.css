@@ -798,7 +798,7 @@ section {
     align-self: start;
     z-index: 5;
     position: sticky;
-    top: 10px;
+    top: 20px;
 }
 
 .sticky img {
@@ -887,6 +887,27 @@ section {
 
 .banner:hover {
     mix-blend-mode: difference;
+}
+
+.new-banner {
+    width: 144px;
+    height: 144px;
+    position: fixed;
+    bottom: 8%;
+    right: 8%;
+    -webkit-box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
+    box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
+    border-radius: 50%;
+    background-color: #ffffff;
+    overflow: hidden;
+    z-index: 5;
+    -webkit-animation: fadeIn 5s 1 ease;
+    animation: fadeIn 5s 1 ease;
+}
+
+.new-banner canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .page-info {
@@ -1766,10 +1787,10 @@ section {
         grid-column: 3 / 5;
     }
 
-    .need-margin,
+    /* .need-margin,
     .need-extra-margin {
         margin: 0;
-    }
+    } */
 
     .main-text p,
     .main-text h1,
@@ -1917,6 +1938,11 @@ section {
         width: 96px;
         height: 96px;
         mix-blend-mode: normal;
+    }
+
+    .new-banner {
+        width: 96px;
+        height: 96px;
     }
 
     .scroll-on-mobile {

@@ -12,6 +12,7 @@ const createSidebar = () => {
     return `
     <ul>
         <li>${sidebarText}</li>
+        <li><a href="i-pianti-e-i-lamenti-dei-pesci-fossili.html" class="link sidebar-items">I pianti e i lamenti<br>dei pasci fossili</a></li>
         <li><a href="bleah!!!.html" class="link sidebar-items">BLEAH!!!</a></li>
         <li><a href="la-notte.html" class="link sidebar-items">La notte è il mio<br>giorno preferito</a></li>
         <li><a href="senza-titolo.html" class="link sidebar-items">Senza titolo</a></li>
@@ -37,6 +38,7 @@ const createMobileMenu = () => {
     return `
     <div class="nav-mobile">
         <ul>
+            <li><a href="i-pianti-e-i-lamenti-dei-pesci-fossili.html">I pianti e i lamenti<brdei pasci fossili</a></li>
             <li><a href="bleah!!!.html">BLEAH!!!</a></li>
             <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
             <li><a href="senza-titolo.html">Senza titolo</a></li>

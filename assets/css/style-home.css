@@ -25,27 +25,6 @@ p {
     text-decoration-color: #000;
 }
 
-.new-banner {
-    width: 144px;
-    height: 144px;
-    position: fixed;
-    bottom: 8%;
-    right: 8%;
-    -webkit-box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
-    box-shadow: 0 0 15px 6px rgb(47 44 115 / 10%);
-    border-radius: 50%;
-    background-color: transparent;
-    overflow: hidden;
-    z-index: 5;
-    -webkit-animation: fadeIn 5s 1 ease;
-    animation: fadeIn 5s 1 ease;
-}
-
-.new-banner canvas {
-    width: 100% !important;
-    height: 100% !important;
-}
-
 #spotlight {
     width: 12px;
     height: 12px;
@@ -83,10 +62,5 @@ p {
 
     #spotlight {
         display: none;
-    }
-
-    .new-banner {
-        width: 96px;
-        height: 96px;
     }
 }
