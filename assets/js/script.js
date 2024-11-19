@@ -4,7 +4,7 @@ console.log(
 );
 
 // create menu
-const currentPathname = location.pathname.split("/").slice(-1);
+const currentPathName = location.pathname.split("/").slice(-1);
 let sidebarText
 let langHref
 let langText
@@ -12,7 +12,7 @@ const createSidebar = () => {
     return `
     <ul>
         <li>${sidebarText}</li>
-        <li><a href="i-pianti-e-i-lamenti-dei-pesci-fossili.html" class="link sidebar-items">I pianti e i lamenti<br>dei pesci fossili</a></li>
+        <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/" class="link sidebar-items">I pianti e i lamenti<br>dei pesci fossili</a></li>
         <li><a href="bleah!!!.html" class="link sidebar-items">BLEAH!!!</a></li>
         <li><a href="la-notte.html" class="link sidebar-items">La notte è il mio<br>giorno preferito</a></li>
         <li><a href="senza-titolo.html" class="link sidebar-items">Senza titolo</a></li>
@@ -28,17 +28,13 @@ const createSidebar = () => {
         <li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
         <li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
     </ul>
-    <!-- <ul>
-        <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/" class="link sidebar-items">I pianti e i lamenti dei pesci fossili</a></li>   
-        <li><a href="the-forest-and-the-encounters.html" class="link sidebar-items">The forest and the encounters</a></li>   
-    </ul> -->
     `;
 }
 const createMobileMenu = () => {
     return `
     <div class="nav-mobile">
         <ul>
-            <li><a href="i-pianti-e-i-lamenti-dei-pesci-fossili.html">I pianti e i lamenti<brdei pesci fossili</a></li>
+            <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/">I pianti e i lamenti<brdei pesci fossili</a></li>
             <li><a href="bleah!!!.html">BLEAH!!!</a></li>
             <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
             <li><a href="senza-titolo.html">Senza titolo</a></li>
@@ -54,17 +50,13 @@ const createMobileMenu = () => {
             <li><a href="arcipelago.html">Arcipelago</a></li>
             <li><a href="nobody.html">Nobody's Indiscipline</a></li>
         </ul>
-        <!-- <ul>
-            <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/">I pianti e i lamenti dei pesci fossili</a></li>   
-            <li><a href="the-forest-and-the-encounters.html">The forest and the encounters</a></li>
-        </ul> -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="mailto:annamaria.org@gmail.com">Contatti</a></li>
         </ul>
         <ul>
-            <li><a href="${langHref}${currentPathname}">${langText}</a></li>
+            <li><a href="${langHref}${currentPathName}">${langText}</a></li>
         </ul>
     </div>`;
 }
@@ -87,7 +79,7 @@ if (getLang === "it") {
 const pagesLinksMenu = document.querySelectorAll(".sidebar-items, .nav-mobile a, .menu-items:not(:last-of-type)");
 pagesLinksMenu.forEach(link => {
     const linkHref = link.getAttribute("href");
-    if (linkHref == currentPathname) {
+    if (linkHref == currentPathName) {
         link.classList.add("current");
     };
 });
