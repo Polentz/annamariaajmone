@@ -28,10 +28,6 @@
 </head>
 
 <body class="body-home">
-    <div class="new-banner">
-        <a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/"></a>
-    </div>
-
     <div class="menu-mobile">
         <div class="menu-name">
             <a href="../index.html">AA</a>
@@ -123,6 +119,13 @@
                 <div class="cal-column">
                     <p>UPCOMING</p>
                     <div class="cal-block">
+                        <p>TBA</p>
+                    </div>
+                </div>
+
+                <div class="cal-column">
+                    <p>PAST</p>
+                    <div class="cal-block">
                         <p>November 28</p>
                         <p>Il Segreto</p>
                         <a href="https://www.palazzostrozzi.org/teatro-delle-relazioni/" target="_blank"
@@ -130,10 +133,6 @@
                         <p>Strozzina</p>
                         <p>Firenze</p>
                     </div>
-                </div>
-
-                <div class="cal-column">
-                    <p>PAST</p>
                     <div class="cal-block">
                         <p>November 23-24</p>
                         <p>I pianti e i lamenti dei pesci fossili</p>
@@ -209,28 +208,7 @@
     <div id="spotlight"></div>
     <div class="line"></div>
 
-    <script src="../assets/libraries/blotter.min.js"></script>
-    <script src="../assets/libraries/liquidDistortMaterial.js"></script>
     <script src="../assets/js/script.js"></script>
-    <script>
-        var text = new Blotter.Text("LOOK HERE", {
-            family: "sans-serif",
-            size: 40,
-            fill: "#171717"
-        });
-
-        var material = new Blotter.LiquidDistortMaterial();
-
-        var blotter = new Blotter(material, { texts: text });
-
-        var scope = blotter.forText(text);
-
-        var container = document.querySelector(".new-banner a");
-
-        window.addEventListener("load", () => {
-            scope.appendTo(container);
-        })
-    </script>
 </body>
 
 </html>
