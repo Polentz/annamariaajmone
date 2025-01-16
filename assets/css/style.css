@@ -594,6 +594,7 @@ nav {
 .main {
     position: relative;
     margin-top: 15vh;
+    padding-top: 0 !important;
 }
 
 .max-height {

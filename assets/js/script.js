@@ -17,6 +17,7 @@ const createSidebar = () => {
         <li><a href="la-notte.html" class="link sidebar-items">La notte è il mio<br>giorno preferito</a></li>
         <li><a href="senza-titolo.html" class="link sidebar-items">Senza titolo</a></li>
         <li><a href="luglio.html" class="link sidebar-items">Luglio</a></li>
+        <li><a href="il-segreto-solo.html" class="link sidebar-items">Il Segreto: solo</a></li>
         <li><a href="il-segreto.html" class="link sidebar-items">Il Segreto</a></li>
         <li><a href="no-rama.html" class="link sidebar-items">No Rama</a></li>
         <li><a href="to-be-banned-from-rome.html" class="link sidebar-items">To Be Banned From Rome</a></li>
@@ -39,6 +40,7 @@ const createMobileMenu = () => {
             <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
             <li><a href="senza-titolo.html">Senza titolo</a></li>
             <li><a href="luglio.html">Luglio</a></li>
+            <li><a href="il-segreto-solo.html">Il Segreto: solo</a></li>
             <li><a href="il-segreto.html">Il Segreto</a></li>
             <li><a href="no-rama.html">No Rama</a></li>
             <li><a href="to-be-banned-from-rome.html">To Be Banned From Rome</a></li>
