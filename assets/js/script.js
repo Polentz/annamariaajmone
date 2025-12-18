@@ -28,6 +28,7 @@ const createSidebar = () => {
     <ul>
         <li><a href="arcipelago.html" class="link sidebar-items">Arcipelago</a></li>
         <li><a href="nobody.html" class="link sidebar-items">Nobody's Indiscipline</a></li>
+        <li><a href="la-tana.html" class="link sidebar-items">La Tana</a></li>
     </ul>
     `;
 }
@@ -51,6 +52,7 @@ const createMobileMenu = () => {
         <ul>
             <li><a href="arcipelago.html">Arcipelago</a></li>
             <li><a href="nobody.html">Nobody's Indiscipline</a></li>
+            <li><a href="la-tana.html">La Tana</a></li>
         </ul>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -171,27 +173,27 @@ if (spinBanner) {
 // special // arcipelago
 const projects = document.querySelectorAll(".project");
 if (projects) {
-    const projectLinks = document.querySelectorAll(".group-link");
+    // const projectLinks = document.querySelectorAll(".group-link");
     const pageBtn = document.querySelector(".page-info-btn");
     const pageInfo = document.querySelector(".page-info");
     const infoClose = document.querySelector(".info-close");
     const projectClose = document.querySelectorAll(".project-close");
-    projectLinks.forEach(link => {
-        link.addEventListener("click", (event) => {
-            event.preventDefault();
-            const href = link.getAttribute("href");
-            projects.forEach(project => {
-                if (href === `#${project.id}`) {
-                    project.style.display = "block";
-                    project.scrollIntoView({
-                        behavior: "smooth"
-                    });
-                } else {
-                    project.style.display = "none";
-                };
-            });
-        });
-    });
+    // projectLinks.forEach(link => {
+    //     link.addEventListener("click", (event) => {
+    //         event.preventDefault();
+    //         const href = link.getAttribute("href");
+    //         projects.forEach(project => {
+    //             if (href === `#${project.id}`) {
+    //                 project.style.display = "block";
+    //                 project.scrollIntoView({
+    //                     behavior: "smooth"
+    //                 });
+    //             } else {
+    //                 project.style.display = "none";
+    //             };
+    //         });
+    //     });
+    // });
     projectClose.forEach(btnClose => {
         btnClose.addEventListener("click", () => {
             window.scrollTo({
@@ -200,13 +202,13 @@ if (projects) {
             });
         });
     });
-    window.addEventListener("scroll", () => {
-        if (window.scrollY == 0) {
-            projects.forEach(project => {
-                project.style.display = "none";
-            });
-        };
-    });
+    // window.addEventListener("scroll", () => {
+    //     if (window.scrollY == 0) {
+    //         projects.forEach(project => {
+    //             project.style.display = "none";
+    //         });
+    //     };
+    // });
     if (pageBtn) {
         pageBtn.addEventListener("click", () => {
             pageInfo.classList.add("open");
