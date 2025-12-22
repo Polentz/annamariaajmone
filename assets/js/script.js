@@ -5,6 +5,7 @@ console.log(
 
 // create menu
 const currentPathName = location.pathname.split("/").slice(-1);
+let contactLabel
 let sidebarText
 let langHref
 let langText
@@ -57,7 +58,7 @@ const createMobileMenu = () => {
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="mailto:annamaria.org@gmail.com">Contatti</a></li>
+            <li><a href="mailto:annamaria.org@gmail.com">${contactLabel}</a></li>
         </ul>
         <ul>
             <li><a href="${langHref}${currentPathName}">${langText}</a></li>
@@ -68,12 +69,14 @@ const mobileMenu = document.querySelector(".menu-overlay");
 const sidebar = document.querySelector(".sidebar");
 const getLang = document.documentElement.lang;
 if (getLang === "it") {
+    contactLabel = "Contatti";
     sidebarText = "PRODUZIONI";
     langHref = "en/";
     langText = "En";
     sidebar.insertAdjacentHTML('beforeend', createSidebar());
     mobileMenu.insertAdjacentHTML('beforeend', createMobileMenu());
 } else if (getLang === "en") {
+    contactLabel = "Contact";
     sidebarText = "WORKS";
     langHref = "../";
     langText = "It";
