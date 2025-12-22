@@ -171,44 +171,37 @@ if (spinBanner) {
 };
 
 // special // arcipelago
-const projects = document.querySelectorAll(".project");
+const projects = document.querySelector(".projects");
 if (projects) {
-    // const projectLinks = document.querySelectorAll(".group-link");
+    console.log(projects);
     const pageBtn = document.querySelector(".page-info-btn");
     const pageInfo = document.querySelector(".page-info");
     const infoClose = document.querySelector(".info-close");
-    const projectClose = document.querySelectorAll(".project-close");
-    // projectLinks.forEach(link => {
-    //     link.addEventListener("click", (event) => {
-    //         event.preventDefault();
-    //         const href = link.getAttribute("href");
-    //         projects.forEach(project => {
-    //             if (href === `#${project.id}`) {
-    //                 project.style.display = "block";
-    //                 project.scrollIntoView({
-    //                     behavior: "smooth"
-    //                 });
-    //             } else {
-    //                 project.style.display = "none";
-    //             };
-    //         });
-    //     });
-    // });
-    projectClose.forEach(btnClose => {
-        btnClose.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+    const projectClose = document.querySelector(".project-close");
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                projectClose.style.opacity = "1";
+                projectClose.style.pointerEvents = "all";
+            } else {
+                projectClose.style.opacity = "0";
+                projectClose.style.pointerEvents = "none";
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+        rootMargin: '200px',
+        threshold: 0
+    });
+    observer.observe(projects);
+
+    projectClose.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
         });
     });
-    // window.addEventListener("scroll", () => {
-    //     if (window.scrollY == 0) {
-    //         projects.forEach(project => {
-    //             project.style.display = "none";
-    //         });
-    //     };
-    // });
     if (pageBtn) {
         pageBtn.addEventListener("click", () => {
             pageInfo.classList.add("open");
