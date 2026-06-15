@@ -13,6 +13,7 @@ const createSidebar = () => {
     return `
     <ul>
         <li>${sidebarText}</li>
+        <li><a href="canti-fossili.html" class="link sidebar-items">Canti fossili</a></li>
         <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/" class="link sidebar-items">I pianti e i lamenti<br>dei pesci fossili</a></li>
         <li><a href="bleah!!!.html" class="link sidebar-items">BLEAH!!!</a></li>
         <li><a href="la-notte.html" class="link sidebar-items">La notte è il mio<br>giorno preferito</a></li>
@@ -37,6 +38,7 @@ const createMobileMenu = () => {
     return `
     <div class="nav-mobile">
         <ul>
+            <li><a href="canti-fossili.html">Canti fossili</a></li>
             <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/">I pianti e i lamenti<brdei pesci fossili</a></li>
             <li><a href="bleah!!!.html">BLEAH!!!</a></li>
             <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
