@@ -141,6 +141,20 @@ if (imageOnLoad) {
 // homepage // calendar
 const calendar = document.getElementById("calendar");
 if (calendar) {
+    const upcomingDates = document.getElementById("upcoming-dates");
+    const pastDates = document.getElementById("past-dates");
+    if (upcomingDates && pastDates) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const heading = pastDates.querySelector("p");
+        upcomingDates.querySelectorAll(".cal-block[data-date]").forEach(block => {
+            const eventDate = new Date(block.dataset.date);
+            if (eventDate < today) {
+                heading.after(block);
+            };
+        });
+    };
+
     // window.addEventListener("scroll", () => {
     //     calendar.classList.add("fade");
     // });
