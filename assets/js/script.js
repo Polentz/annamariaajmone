@@ -190,47 +190,23 @@ if (spinBanner) {
 };
 
 // special // arcipelago
-const projects = document.querySelector(".projects");
-if (projects) {
-    console.log(projects);
-    const pageBtn = document.querySelector(".page-info-btn");
-    const pageInfo = document.querySelector(".page-info");
-    const infoClose = document.querySelector(".info-close");
-    const projectClose = document.querySelector(".project-close");
+const sectionMain = document.querySelector(".main");
+const pageTitle = document.querySelector(".page-title.hide-on-scroll");
+if (pageTitle && sectionMain) {
     const observerCallback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                projectClose.style.opacity = "1";
-                projectClose.style.pointerEvents = "all";
+                pageTitle.style.opacity = "1";
             } else {
-                projectClose.style.opacity = "0";
-                projectClose.style.pointerEvents = "none";
-            }
+                pageTitle.style.opacity = "0";
+            };
         });
     };
-
     const observer = new IntersectionObserver(observerCallback, {
-        rootMargin: '200px',
+        rootMargin: '-200px',
         threshold: 0
     });
-    observer.observe(projects);
-
-    projectClose.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-    if (pageBtn) {
-        pageBtn.addEventListener("click", () => {
-            pageInfo.classList.add("open");
-        });
-    }
-    if (infoClose) {
-        infoClose.addEventListener("click", () => {
-            pageInfo.classList.remove("open");
-        });
-    }
+    observer.observe(sectionMain);
 };
 
 // special // bleah
