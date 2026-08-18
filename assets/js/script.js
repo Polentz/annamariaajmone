@@ -39,7 +39,7 @@ const createMobileMenu = () => {
     <div class="nav-mobile">
         <ul>
             <li><a href="canti-fossili.html">Canti fossili</a></li>
-            <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/">I pianti e i lamenti<brdei pesci fossili</a></li>
+            <li><a href="https://ipiantieilamentideipescifossili.annamariaajmone.com/">I pianti e i lamenti dei pesci fossili</a></li>
             <li><a href="bleah!!!.html">BLEAH!!!</a></li>
             <li><a href="la-notte.html">La notte è il mio giorno preferito</a></li>
             <li><a href="senza-titolo.html">Senza titolo</a></li>
