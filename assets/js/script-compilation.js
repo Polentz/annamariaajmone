@@ -91,7 +91,7 @@ function select(i, autoplay) {
     listEl.querySelectorAll('li').forEach((li, idx) => {
         li.classList.toggle('is-active', idx === current);
     });
-    nowEl.textContent = `${t.artist} — ${t.title}`;
+    nowEl.textContent = `${t.title} / ${t.artist}`;
 
     if (t.source === 'youtube') {
         bcFrame.src = 'about:blank'; // stops Bandcamp audio

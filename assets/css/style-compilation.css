@@ -141,25 +141,103 @@
     font-weight: 700;
 }
 
+.track-title,
+.track-artist {
+    overflow-wrap: anywhere;
+}
+
+.player-bar {
+    flex-wrap: wrap;
+}
+
+/* tablet: player and credits stack, full width */
+@media screen and (max-width: 915px) {
+    .compilation-grid {
+        grid-auto-rows: auto;
+    }
+
+    .compilation-grid .compilation,
+    .compilation-grid .compilation-side {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
+        grid-column: 1 / -1;
+    }
+
+    .compilation {
+        margin-bottom: 40px;
+    }
+
+    .compilation-side {
+        margin-bottom: 80px;
+    }
+}
+
+/* mobile */
 @media screen and (max-width: 600px) {
-    .track-btn {
-        grid-template-columns: 24px 1fr 90px;
-        gap: 10px;
+
+    .page-title {
+        position: fixed;
+        top: 20px;
+        right: 20px;
     }
 
-    .track-artist {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        opacity: 0.6;
+    .compilation {
+        margin-bottom: 40px;
     }
 
-    .track-info {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
+    .compilation-side {
+        margin-bottom: 60px;
     }
 
     .player-bar {
         flex-direction: column;
-        gap: 5px;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .player-controls {
+        justify-content: space-between;
+    }
+
+    .compilation .player-controls button {
+        padding: 10px 0;
+    }
+
+    .player-note {
+        min-height: 0;
+        margin-bottom: 20px;
+    }
+
+    /* number | title + artist stacked */
+    .track-btn {
+        grid-template-columns: 56px 1fr;
+        column-gap: 10px;
+        row-gap: 0;
+        padding: 10px 0;
+    }
+
+    .track-num {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+    .track-title {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .track-artist {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+        opacity: 0.6;
+    }
+
+    .tracklist li.is-active .track-artist {
+        opacity: 1;
+    }
+
+    .compilation-list {
+        gap: 16px;
     }
 }
